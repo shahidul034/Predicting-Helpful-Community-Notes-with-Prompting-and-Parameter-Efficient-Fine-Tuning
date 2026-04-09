@@ -43,6 +43,15 @@ outputs/logs/*.log
 
 # Model checkpoints - EXCLUDE ALL MODELS
 outputs/models/
+models/
+checkpoints/
+*.safetensors
+*.pt
+*.pth
+*.ckpt
+*.onnx
+outputs/**/*.bin
+outputs/**/*.safetensors
 outputs/evaluations/*.json
 outputs/evaluations/*.csv
 outputs/evaluations/*.png
