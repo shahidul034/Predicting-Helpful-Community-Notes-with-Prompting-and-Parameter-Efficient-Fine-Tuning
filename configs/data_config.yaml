@@ -1,0 +1,42 @@
+# Data Configuration
+
+data:
+  source:
+    url: "https://communitynotes.twitter.com/guide/en/under-the-hood/download-data"
+    files:
+      - name: "notes"
+        pattern: "notes-*.tsv.gz"
+      - name: "ratings"
+        pattern: "ratings-*.tsv.gz"
+      - name: "note_status_history"
+        pattern: "noteStatusHistory-*.tsv.gz"
+
+  paths:
+    raw_dir: "data/raw"
+    processed_dir: "data/processed"
+    output_file: "community_notes_cleaned.parquet"
+
+  filtering:
+    exclude_statuses:
+      - "NEEDS_MORE_RATINGS"
+    min_ratings: 5
+    include_classifications:
+      - "MISINFORMED_OR_POTENTIALLY_MISLEADING"
+      - "NOT_MISLEADING"
+
+  temporal_split:
+    train_cutoff_date: "2024-10-01"
+    val_cutoff_date: "2024-11-01"
+    test_start_date: "2024-11-01"
+
+  columns:
+    note_text: "summary"
+    classification: "classification"
+    status: "currentLabelStatus"
+    note_id: "noteId"
+    created_at: "createdAt"
+    author_id: "authorId"
+
+  label_mapping:
+    CURRENTLY_RATED_HELPFUL: 1
+    CURRENTLY_RATED_NOT_HELPFUL: 0
