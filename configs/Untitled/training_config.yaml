@@ -1,0 +1,49 @@
+# Training Configuration
+
+training:
+  batch_size: 8
+  gradient_accumulation_steps: 4
+  learning_rate: 2e-4
+  max_steps: 1000
+  warmup_steps: 100
+  weight_decay: 0.01
+  lr_scheduler_type: "cosine"
+  logging_steps: 50
+  save_steps: 200
+  evaluation_strategy: "steps"
+  eval_steps: 100
+
+  # Mixed precision training
+  fp16: true
+  bf16: false
+
+  # Device settings
+  device: "auto"
+  num_workers: 4
+
+# Inference Configuration
+inference:
+  vllm:
+    host: "0.0.0.0"
+    port: 8000
+    tensor_parallel_size: 1
+    gpu_memory_utilization: 0.9
+    max_model_len: 512
+    swap_space: 4
+    enforce_eager: false
+
+  batch_size: 32
+  max_new_tokens: 10
+
+# Evaluation Configuration
+evaluation:
+  metrics:
+    - accuracy
+    - precision
+    - recall
+    - f1
+    - auc_roc
+    - auc_pr
+
+  save_results: true
+  results_dir: "outputs/evaluations"
