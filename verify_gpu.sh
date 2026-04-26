@@ -1,29 +1,67 @@
 #!/bin/bash
-# Verify GPU configuration
+# GPU Verification Script
+# Checks GPU availability and configuration
 
 echo "=== GPU Configuration Check ==="
+echo ""
 
-# Set GPU environment variables
-export CUDA_VISIBLE_DEVICES=2
-export CUDA_DEVICE_ORDER=PCI_BUS_ID
+# Check if nvidia-smi is available
+if ! command -v nvidia-smi &> /dev/null; then
+    echo "ERROR: nvidia-smi not found. Is NVIDIA driver installed?"
+    exit 1
+fi
 
-echo "CUDA_VISIBLE_DEVICES=$CUDA_VISIBLE_DEVICES"
-echo "CUDA_DEVICE_ORDER=$CUDA_DEVICE_ORDER"
+# List GPUs
+echo "Available GPUs:"
+nvidia-smi -L
+echo ""
+
+# Show detailed GPU info
+echo "GPU Details:"
+nvidia-smi --query-gpu=index,name,memory.total,memory.free,utilization.gpu,temperature.gpu,power.draw,power.limit --format=csv,noheader
+echo ""
+
+# Check CUDA visible devices
+CUDA_DEVICES="${CUDA_VISIBLE_DEVICES:-not set}"
+echo "CUDA_VISIBLE_DEVICES: $CUDA_DEVICES"
+echo ""
+
+# Verify GPU 2 specifically (default for this project)
+DEFAULT_GPU="2"
+if [ "$CUDA_DEVICES" = "$DEFAULT_GPU" ]; then
+    echo "GPU $DEFAULT_GPU is set as the visible device."
+    nvidia-smi -i "$DEFAULT_GPU" --query-gpu=name,memory.total,memory.free --format=csv,noheader
+elif [ "$CUDA_DEVICES" = "not set" ]; then
+    echo "CUDA_VISIBLE_DEVICES is not set."
+    echo "Default GPU for this project: $DEFAULT_GPU"
+    if nvidia-smi -i "$DEFAULT_GPU" --query-gpu=name --format=csv,noheader &> /dev/null; then
+        echo "GPU $DEFAULT_GPU is available."
+    else
+        echo "WARNING: GPU $DEFAULT_GPU is not available."
+    fi
+else
+    echo "Custom CUDA_VISIBLE_DEVICES: $CUDA_DEVICES"
+fi
 
 echo ""
-echo "=== NVIDIA GPU Info ==="
-nvidia-smi -L 2>/dev/null || echo "nvidia-smi not available"
 
+# Check CUDA version
+echo "CUDA Version:"
+nvcc --version 2>/dev/null || nvidia-smi --query-gpu.driver_version --format=csv,noheader
 echo ""
-echo "=== Python GPU Detection ==="
-python -c "
+
+# Python GPU check
+echo "Python GPU Check:"
+python3 -c "
 import torch
 print(f'PyTorch version: {torch.__version__}')
 print(f'CUDA available: {torch.cuda.is_available()}')
 if torch.cuda.is_available():
     print(f'CUDA version: {torch.version.cuda}')
-    print(f'Device count: {torch.cuda.device_count()}')
+    print(f'GPU count: {torch.cuda.device_count()}')
     for i in range(torch.cuda.device_count()):
-        print(f'  Device {i}: {torch.cuda.get_device_name(i)}')
-        print(f'    Memory: {torch.cuda.get_device_properties(i).total_memory / 1e9:.2f} GB')
-" 2>/dev/null || echo "PyTorch not installed or CUDA not available"
+        print(f'  GPU {i}: {torch.cuda.get_device_name(i)}')
+" 2>/dev/null || echo "(Python/PyTorch not available)"
+
+echo ""
+echo "=== GPU Check Complete ==="
