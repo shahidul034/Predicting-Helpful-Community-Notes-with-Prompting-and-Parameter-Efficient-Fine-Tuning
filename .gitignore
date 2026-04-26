@@ -1,83 +1,60 @@
+# Model weights & checkpoints
+*.bin
+*.pth
+*.pt
+*.safetensors
+*.h5
+*.pb
+*.onnx
+*.tflite
+*.ckpt
+*.model
+*.weights
+*.gguf
+*.ggml
+
+# Hugging Face cache
+cache/
+/.cache/
+/models--*/
+/nix/
+
+# Training checkpoints
+checkpoint-*/
+**/checkpoint-*/
+
+# Output artifacts
+outputs/
+
 # Python
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
 *.egg-info/
-.installed.cfg
+dist/
+build/
 *.egg
 
 # Virtual environments
 venv/
-ENV/
+.venv/
 env/
-.venv
+.env/
+
+# Jupyter
+.ipynb_checkpoints/
 
 # IDE
-.idea/
 .vscode/
+.idea/
 *.swp
 *.swo
 *~
-.DS_Store
 
-# Jupyter
-.ipynb_checkpoints
+# OS
+.DS_Store
+Thumbs.db
 
 # Logs
 *.log
-outputs/logs/*.log
-
-# Model checkpoints - EXCLUDE ALL MODELS
-outputs/models/
-models/
-checkpoints/
-*.safetensors
-*.pt
-*.pth
-*.ckpt
-*.onnx
-outputs/**/*.bin
-outputs/**/*.safetensors
-outputs/evaluations/*.json
-outputs/evaluations/*.csv
-outputs/evaluations/*.png
-outputs/evaluations/*.md
-outputs/evaluations/*.parquet
-outputs/visualizations/
-outputs/logs/
-
-# Data - EXCLUDE ALL DATA FILES
-data/raw/
-data/processed/
-
-# Experiments
-wandb/
-mlruns/
-
-# Environment
-.env
-.env.local
-*.env
-
-# Temporary
-tmp/
-temp/
-*.tmp
-
-# OS
-Thumbs.db
-.DS_Store

@@ -223,7 +223,10 @@ def run_prompting(
                 pad_token_id=tokenizer.eos_token_id,
             )
 
-            completion = tokenizer.decode(outputs[0], skip_special_tokens=True)
+            prompt_len = inputs["input_ids"].shape[1]
+            completion = tokenizer.decode(
+                outputs[0][prompt_len:], skip_special_tokens=True
+            )
             prediction = extract_prediction(completion)
             predictions.append(prediction)
 
@@ -240,9 +243,7 @@ def main():
 
     # Load data
     test_df = load_data(input_dir, args.max_samples)
-    y_true = (
-        (test_df["label"] == 1).map({True: "HELPFUL", False: "NOT_HELPFUL"}).tolist()
-    )
+    y_true = test_df["label"].tolist()
 
     # Load model
     logger.info(f"Loading model: {args.model_name}")

@@ -107,49 +107,235 @@ async def download_all_files(output_dir: Path, overwrite: bool = False) -> None:
 
 
 def generate_sample_data(output_dir: Path, n_samples: int = 1000) -> None:
-    """Generate sample data for testing when real data is unavailable."""
+    """Generate a challenging synthetic dataset with overlapping features to prevent trivial classification."""
     import random
     import gzip
     from datetime import datetime, timedelta
 
     output_dir.mkdir(parents=True, exist_ok=True)
 
-    logger.info(f"Generating {n_samples} sample notes...")
+    logger.info(f"Generating {n_samples} challenging sample notes...")
 
-    # Sample helpful notes
-    helpful_notes = [
-        "According to the CDC, over 95% of Americans are now fully vaccinated against COVID-19.",
-        "The Joint Committee on Taxation reports that this bill will not increase taxes for 90% of Americans.",
-        "NASA confirms that the James Webb Space Telescope has successfully captured images of distant galaxies.",
-        "Multiple peer-reviewed studies have found no link between vaccines and autism.",
-        "According to the IPCC, global temperatures have risen by 1.1°C since pre-industrial times.",
-        "The World Health Organization states that hand washing for 20 seconds can prevent the spread of viruses.",
-        "Data from the Bureau of Labor Statistics shows unemployment at a 50-year low.",
-        "According to peer-reviewed research published in Nature, this claim is not supported by evidence.",
-        "The FBI confirms that there is no evidence of widespread voter fraud in the 2020 election.",
-        "Multiple fact-checking organizations have rated this claim as false based on available evidence.",
+    random.seed(42)
+
+    subjects = [
+        "climate change", "vaccines", "elections", "tax policy", "housing prices",
+        "inflation rates", "unemployment", "education reforms", "healthcare costs",
+        "renewable energy", "artificial intelligence regulation", "food safety",
+        "water quality", "air pollution", "public transport", "immigration",
+        "trade agreements", "cryptocurrency regulation", "data privacy", "cybersecurity"
     ]
 
-    # Sample unhelpful notes
-    unhelpful_notes = [
-        "This is obviously fake news and anyone who believes it is stupid.",
-        "I don't like this person so their tweet is probably wrong.",
-        "Everyone knows this is true, why are you even questioning it?",
-        "This is just the government trying to control us.",
-        "I heard on the radio that this is not true but I can't find a source.",
-        "This is garbage and should be deleted immediately.",
-        "Only idiots would believe this kind of nonsense.",
-        "The media is lying about this, trust me.",
-        "This is clearly biased and not worth reading.",
-        "I disagree with this completely but have no evidence.",
+    sources = [
+        "the EPA reports", "a study in JAMA found", "according to the CDC",
+        "the Department of Labor states", "researchers at MIT found",
+        "the Federal Reserve noted", "a University of Michigan study shows",
+        "NASA data indicates", "the WHO confirms", "Harvard researchers published"
     ]
+
+    numbers = [
+        "42%", "73%", "1.2 million", "5.6 million", "$23 billion", "$4.7 trillion",
+        "18,000", "3.8 million", "67%", "91%", "0.4%", "23 million", "1.9 billion"
+    ]
+
+    directions = [
+        "increased by", "decreased by", "remained at", "grew to", "fell below",
+        "stayed above"
+    ]
+
+    timeframes = [
+        "over the past year", "since 2019", "in Q3 2024", "as of March 2024",
+        "between January and June", "during the first half of 2024",
+        "for the fiscal year ending December", "between 2020 and 2024"
+    ]
+
+    neutral_verbs = [
+        "stated", "reported", "finds", "indicates", "suggests", "notes", "observed"
+    ]
+
+    confident_verbs = [
+        "proves", "confirms", "establishes", "demonstrates decisively", "leaves no doubt"
+    ]
+
+    hedges = [
+        "may", "could", "potentially", "appears to", "tends to", "is likely to"
+    ]
+
+    qualifiers = [
+        "the data suggests", "according to the available evidence", "based on recent figures",
+        "as reported by", "research indicates", "findings show"
+    ]
+
+    filler_phrases = [
+        "It is worth noting that", "In addition, it should be mentioned that",
+        "Furthermore, one might consider that", "The point being made here is that",
+        "On the other hand, there are those who argue that", "Some people would say that",
+        "It could be argued that", "The general consensus seems to be that"
+    ]
+
+    subjective_phrases = [
+        "clearly", "obviously", "undeniably", "it is absurd to think",
+        "no one with common sense", "everyone knows", "it goes without saying"
+    ]
+
+    mild_subjective = [
+        "I think", "in my opinion", "it seems to me", "personally I believe",
+        "from my perspective", "I would argue"
+    ]
+
+    weak_sources = [
+        "a blog post", "someone on social media", "I read somewhere", "a friend told me",
+        "various internet sources", "according to some websites"
+    ]
+
+    # Generate notes with mixed signals
+    def generate_confused_note():
+        """Note that mixes helpful and unhelpful signals."""
+        subject = random.choice(subjects)
+        if random.random() < 0.5:
+            parts = [
+                f"{random.choice(filler_phrases)}",
+                f"{random.choice(subjective_phrases)}",
+            ]
+            parts.append(f"the claim about {subject} {random.choice(hedges)} accurate")
+            parts.append(f"though {random.choice(weak_sources)} suggests otherwise")
+        else:
+            parts = [
+                f"Regarding {subject},",
+                f"{random.choice(weak_sources)} indicates that",
+                f"{random.choice(subjective_phrases)} this is the case, although I cannot verify this claim"
+            ]
+        return " ".join(parts)
+
+    def generate_mildly_helpful_note():
+        """Note with some evidence but weak reasoning."""
+        subject = random.choice(subjects)
+        source = random.choice(sources)
+        number = random.choice(numbers)
+        direction = random.choice(directions)
+        timeframe = random.choice(timeframes)
+        return (
+            f"According to {source}, {subject} {direction} {number} {timeframe}. "
+            "However, the sample size in the study was limited and results may vary."
+        )
+
+    def generate_helpful_note():
+        """Well-structured note with clear evidence."""
+        subject = random.choice(subjects)
+        source = random.choice(sources)
+        number = random.choice(numbers)
+        direction = random.choice(directions)
+        timeframe = random.choice(timeframes)
+        qualifier = random.choice(qualifiers)
+        return (
+            f"The claim about {subject} is misleading. {source}. Specifically, {subject} "
+            f"{direction} {number} {timeframe}. {qualifier}, the original tweet's figures "
+            f"are not consistent with publicly available data from authoritative sources."
+        )
+
+    def generate_mixed_quality_note():
+        """Note that is borderline helpful."""
+        subject = random.choice(subjects)
+        source = random.choice(sources)
+        number = random.choice(numbers)
+        direction = random.choice(directions)
+        return (
+            f"It appears that {subject} {direction} {number}. "
+            f"While {source}, it's hard to say for certain whether this fully addresses the claim "
+            f"in the original tweet. There may be other factors at play here."
+        )
+
+    def generate_noisy_helpful_note():
+        """Helpful note with unnecessary noise."""
+        subject = random.choice(subjects)
+        source = random.choice(sources)
+        number = random.choice(numbers)
+        direction = random.choice(directions)
+        filler = random.choice(filler_phrases)
+        return (
+            f"{filler} the statement about {subject} requires clarification. "
+            f"{source}. The data shows {subject} {direction} {number}. "
+            f"Some people might disagree with this interpretation, but the evidence "
+            f"seems fairly conclusive on this particular matter at this point in time."
+        )
+
+    def generate_agnostic_note():
+        """Note that doesn't take a clear stance."""
+        subject = random.choice(subjects)
+        return (
+            f"The question of {subject} is complex. There are arguments on both sides "
+            f"of this issue. Some experts believe one way, while others disagree. "
+            f"More research is needed to reach a definitive conclusion."
+        )
+
+    def generate_misleading_note():
+        """Note that cites a source but draws questionable conclusions."""
+        subject = random.choice(subjects)
+        source = random.choice(sources)
+        number = random.choice(numbers)
+        return (
+            f"If you look at what {source}, you'll see {subject} increased by {number}. "
+            f"This completely proves the original point in the tweet."
+        )
+
+    def generate_short_note():
+        """Brief note with minimal information."""
+        subject = random.choice(subjects)
+        phrases = [
+            f"The tweet about {subject} needs context.",
+            f"Regarding {subject}: more information is needed.",
+            f"This claim about {subject} is worth examining further.",
+            f"Many people are confused about {subject} based on this post.",
+        ]
+        return random.choice(phrases)
+
+    def generate_personal_note():
+        """Note with personal experience that may or may not be helpful."""
+        subject = random.choice(subjects)
+        phrase = random.choice(mild_subjective)
+        return (
+            f"{phrase} the information about {subject} is inaccurate based on "
+            f"what I've encountered in my own experience. I've worked in this field for "
+            f"several years and the numbers don't seem to match the claim being made."
+        )
+
+    def generate_overconfident_correct_note():
+        """Correct information but delivered in an overconfident manner."""
+        subject = random.choice(subjects)
+        source = random.choice(sources)
+        number = random.choice(numbers)
+        return (
+            f"It's absolutely certain from what {source} that {subject} reached {number}. "
+            f"Anyone who thinks otherwise is ignoring the data."
+        )
+
+    def generate_cautious_wrong_note():
+        """Well-written but subtly flawed note."""
+        subject = random.choice(subjects)
+        source = random.choice(sources)
+        return (
+            f"It might be worth noting that, based on {source}, there appears to be some "
+            f"confusion regarding {subject}. The author suggests figures could be different, "
+            f"though this interpretation seems to conflate two separate datasets."
+        )
+
+    # Pool of generators with varying quality levels
+    # Each generator produces notes with different helpfulness priors
+    note_generators = {
+        "clearly_helpful": (generate_helpful_note, 0.92),
+        "mildly_helpful": (generate_mildly_helpful_note, 0.72),
+        "noisy_helpful": (generate_noisy_helpful_note, 0.62),
+        "mixed_quality": (generate_mixed_quality_note, 0.48),
+        "overconfident_correct": (generate_overconfident_correct_note, 0.45),
+        "agnostic": (generate_agnostic_note, 0.42),
+        "personal_experience": (generate_personal_note, 0.38),
+        "cautious_wrong": (generate_cautious_wrong_note, 0.32),
+        "misleading": (generate_misleading_note, 0.22),
+        "confused": (generate_confused_note, 0.15),
+        "short_note": (generate_short_note, 0.50),
+    }
 
     classifications = ["MISINFORMED_OR_POTENTIALLY_MISLEADING", "NOT_MISLEADING"]
-    statuses = [
-        "CURRENTLY_RATED_HELPFUL",
-        "CURRENTLY_RATED_NOT_HELPFUL",
-        "NEEDS_MORE_RATINGS",
-    ]
 
     notes_data = []
     ratings_data = []
@@ -159,17 +345,25 @@ def generate_sample_data(output_dir: Path, n_samples: int = 1000) -> None:
     for i in range(n_samples):
         note_id = f"note_{i:08d}"
         author_id = f"user_{random.randint(10000, 99999)}"
-        created_at = base_date + timedelta(
-            days=random.randint(0, 364)
-        )  # Full year 2024
+        created_at = base_date + timedelta(days=random.randint(0, 364))
 
-        # 60% helpful, 40% not helpful
-        if random.random() < 0.6:
-            summary = random.choice(helpful_notes)
-            status = "CURRENTLY_RATED_HELPFUL"
-        else:
-            summary = random.choice(unhelpful_notes)
-            status = "CURRENTLY_RATED_NOT_HELPFUL"
+        # Pick a random generator
+        gen_name, (gen_func, helpfulness_prior) = random.choice(
+            list(note_generators.items())
+        )
+
+        summary = gen_func()
+
+        # Add label noise: 12% of notes get flipped
+        actual_helpfulness = random.random() + (helpfulness_prior - 0.5)
+        if random.random() < 0.12:
+            actual_helpfulness = 1.0 - actual_helpfulness
+
+        status = (
+            "CURRENTLY_RATED_HELPFUL"
+            if actual_helpfulness > 0.5
+            else "CURRENTLY_RATED_NOT_HELPFUL"
+        )
 
         classification = random.choice(classifications)
 
@@ -185,7 +379,6 @@ def generate_sample_data(output_dir: Path, n_samples: int = 1000) -> None:
             }
         )
 
-        # Generate some ratings
         for j in range(random.randint(5, 20)):
             ratings_data.append(
                 {

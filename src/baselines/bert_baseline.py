@@ -141,7 +141,6 @@ def main():
         logging_steps=50,
         report_to="none",
         torch_compile=False,
-        device="cuda:0",  # Maps to GPU 2 due to CUDA_VISIBLE_DEVICES=2
     )
 
     # Initialize trainer
