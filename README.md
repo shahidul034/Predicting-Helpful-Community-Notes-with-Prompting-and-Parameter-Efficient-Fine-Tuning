@@ -145,19 +145,6 @@ python src/inference/serve_vllm.py --model-path outputs/models/qwen3-4b-lora
 python src/inference/run_inference.py --endpoint http://localhost:8000
 ```
 
-### Evaluate Models
-
-```bash
-# Evaluate all models
-python src/evaluation/evaluate.py --results-dir outputs/evaluations
-
-# Ablation study
-python src/evaluation/ablation_study.py
-
-# Error analysis
-python src/evaluation/error_analysis.py
-```
-
 ## Configuration
 
 Edit the YAML files in `configs/` to customize:
@@ -173,8 +160,8 @@ Edit the YAML files in `configs/` to customize:
 | Baseline 1 | TF-IDF + LR | Traditional ML baseline |
 | Baseline 2 | BERT-base | Standard transformer baseline |
 | Prompting | Qwen3-4B | Zero-shot, Few-shot, CoT |
-| Fine-tuning | Qwen3-4B + LoRA | Primary method |
-| Fine-tuning | Gemma-3-4B + LoRA | Architecture comparison |
+| Fine-tuning | Qwen3-4B + LoRA | [Hugging Face](https://huggingface.co/shahidul034/qwen3-4b-instruct-2507-CommunityNotesEffectiveness) |
+| Fine-tuning | Gemma-3-4B + LoRA | [Hugging Face](https://huggingface.co/shahidul034/gemma-3-4b-it-CommunityNotesEffectiveness) |
 
 ## Evaluation Metrics
 
@@ -188,6 +175,21 @@ Edit the YAML files in `configs/` to customize:
 - **Md Shahidul Salim**: LLM fine-tuning (LoRA via Unsloth), model training, inference with vLLM
 - **Rafa Pashkov**: Data preprocessing, EDA, traditional baselines
 - **Mridul Madan**: Prompting experiments, evaluation pipeline, analysis & visualization
+
+## Citation
+
+If you use this code or models in your research, please cite:
+
+```bibtex
+@inproceedings{madan2025predicting,
+  title     = {Predicting Helpful Community Notes with Prompting and Parameter-Efficient Fine-Tuning},
+  author    = {Madan, Mridul and Pashkov, Rafael and Salim, Md Shahidul},
+  booktitle = {Undergraduate Research Symposium},
+  year      = {2025},
+  institution = {University of Massachusetts Lowell},
+  url       = {https://github.com/shahidul034/Predicting-Helpful-Community-Notes-with-Prompting-and-Parameter-Efficient-Fine-Tuning}
+}
+```
 
 ## References
 
