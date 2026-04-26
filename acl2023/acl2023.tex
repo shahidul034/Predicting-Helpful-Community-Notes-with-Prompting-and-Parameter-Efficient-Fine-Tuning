@@ -15,6 +15,20 @@
 \usepackage{graphicx}
 \usepackage{tikz}
 \usetikzlibrary{shapes.geometric, arrows.meta, positioning}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins, breakable}
+
+% Custom style for the example box
+\newtcolorbox{examplebox}[1]{
+    colback=gray!5,
+    colframe=gray!80,
+    fonttitle=\bfseries,
+    title=#1,
+    sharp corners,
+    boxrule=0.5pt,
+    enhanced,
+    breakable
+}
 
 \setlength\titlebox{6cm}
 
@@ -48,6 +62,34 @@
 	We use the public Community Notes data released by Twitter/X.\footnote{\begin{minipage}{\columnwidth}\small\url{https://communitynotes.twitter.com/guide/en/under-the-hood/download-data}\end{minipage}} The project proposal and implementation focus on note text and note status metadata derived from the dataset's note, rating, and status-history files. Following the original project plan, we treat the task as binary classification: predict whether a note is \textsc{currently\_rated\_helpful} or not, while excluding notes labeled \textsc{needs\_more\_ratings}.
 	
 	The dataset was split into 754 training samples and 246 test samples. All experiments---prompting, BERT fine-tuning, and LoRA fine-tuning---use the same train/test split for consistent comparison.
+
+	\begin{figure}[ht]
+	\begin{examplebox}{Task Illustration: Helpful vs.\ Not Helpful Community Notes}
+	    \small
+	    \textbf{Original Post (Context):} ``Education reforms have increased school performance by 30\% since implementation began last year.''
+	    
+	    \vspace{0.5em}
+	    \hrule
+	    \vspace{0.5em}
+	    
+	    \begin{minipage}[t]{0.48\textwidth}
+	        \textbf{Note A (Input Text):} \\
+	        ``The claim about education reforms is misleading. Harvard researchers published. Specifically, education reforms decreased by 0.4\% in Q3 2024. as reported by, the original tweet's figures are not consistent with publicly available data from authoritative sources.'' \\
+	        \textbf{Prediction/Target:} \textcolor{green!60!black}{\textsc{Helpful}}
+	    \end{minipage}
+	    \hfill
+	    \vrule
+	    \hfill
+	    \begin{minipage}[t]{0.48\textwidth}
+	        \textbf{Note B (Input Text):} \\
+	        ``The question of education reforms is complex. There are arguments on both sides of this issue. Some experts believe one way, while others disagree. More research is needed to reach a definitive conclusion.'' \\
+	        \vspace{2.5em} \\
+	        \textbf{Prediction/Target:} \textcolor{red!60!black}{\textsc{Not\_Helpful}}
+	    \end{minipage}
+	\end{examplebox}
+	\caption{Real examples from the Community Notes training set. Note A received 99 ratings and was classified as helpful; it cites specific data and authoritative sources. Note B received 100 ratings but was classified as not helpful; it is vague, non-committal, and provides no evidence.}
+	\label{fig:task_example}
+	\end{figure}
 	
 	\section{Methods}
 	\subsection{Prompting Baselines}
