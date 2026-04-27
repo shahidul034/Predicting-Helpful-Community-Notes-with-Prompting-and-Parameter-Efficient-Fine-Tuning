@@ -163,6 +163,54 @@ Edit the YAML files in `configs/` to customize:
 | Fine-tuning | Qwen3-4B + LoRA | [Hugging Face](https://huggingface.co/shahidul034/qwen3-4b-instruct-2507-CommunityNotesEffectiveness) |
 | Fine-tuning | Gemma-3-4B + LoRA | [Hugging Face](https://huggingface.co/shahidul034/gemma-3-4b-it-CommunityNotesEffectiveness) |
 
+## Dataset Analysis
+
+### Dataset Statistics
+
+| Statistic | Train (754) | Test (246) |
+|-----------|:-----------:|:----------:|
+| Helpful (\%) | 49.7% | 54.5% |
+| Not Helpful (\%) | 50.3% | 45.5% |
+| Misinformed intent (\%) | 53.8% | 47.2% |
+| Not Misleading intent (\%) | 46.2% | 52.8% |
+| Mean word count | 31.4 | 31.7 |
+| Median word count | 33 | 33 |
+| Mean ratings per note | 50.1 | 50.2 |
+| Flesch-Kincaid grade | 11.2 | 11.0 |
+| Date range | Jan--Sep 2024 | Oct--Dec 2024 |
+
+### Class Distribution
+
+```
+Training Set (754 notes):
+  Helpful (1):       375 (49.7%)
+  Not Helpful (0):   379 (50.3%)
+
+Test Set (246 notes):
+  Helpful (1):       134 (54.5%)
+  Not Helpful (0):   112 (45.5%)
+```
+
+### Linguistic Profile
+
+| Feature | Helpful Notes | Not Helpful Notes |
+|---------|:-------------:|:-----------------:|
+| Mean word count | 32.7 | 30.0 |
+| Flesch-Kincaid grade | 11.2 | 11.1 |
+| Top unigrams | data, claim, about, tweet | claim, about, data, tweet |
+| Top bigrams | `not consistent with`, `publicly available data` | `hard to say`, `for certain` |
+
+**Key linguistic patterns:**
+- **Helpful notes** use authoritative, evidence-citing phrasing: *"the original tweet's figures are not consistent with publicly available data from authoritative sources"*
+- **Not Helpful notes** use hedging language: *"This is complex... hard to say for certain... worth noting that"*
+- Readability is similar across classes (~Grade 11), indicating complexity alone does not distinguish effective notes
+
+### Data Quality
+
+- **Temporal split** ensures zero overlap between train/test (1-day gap: Sep 30 → Oct 1)
+- **No duplicate note IDs** across splits
+- **Statistically consistent** splits: word count (31.4 vs 31.7), ratings (50.1 vs 50.2), readability (11.2 vs 11.0)
+
 ## Evaluation Metrics
 
 - Accuracy
@@ -170,11 +218,20 @@ Edit the YAML files in `configs/` to customize:
 - AUC-ROC
 - AUC-PR
 
-## Team
+## Team & Contributions
 
-- **Md Shahidul Salim**: LLM fine-tuning (LoRA via Unsloth), model training, inference with vLLM
-- **Rafa Pashkov**: Data preprocessing, EDA, traditional baselines
-- **Mridul Madan**: Prompting experiments, evaluation pipeline, analysis & visualization
+- **Md Shahidul Salim**
+  - LLM fine-tuning (LoRA via Unsloth)
+  - Model training and inference serving (vLLM)
+  - Hugging Face model publishing
+
+- **Rafa Pashkov**
+  - Data preprocessing and EDA
+  - Implementation of traditional baselines (TF-IDF + LR, BERT)
+
+- **Mridul Madan**
+  - Prompting experiments (Zero-shot, Few-shot, CoT)
+  - Evaluation metrics, analysis, and visualizations
 
 ## Citation
 

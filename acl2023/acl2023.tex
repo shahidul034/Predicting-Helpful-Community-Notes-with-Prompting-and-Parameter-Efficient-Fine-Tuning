@@ -20,14 +20,14 @@
 
 % Custom style for the example box
 \newtcolorbox{examplebox}[1]{
-    colback=gray!5,
-    colframe=gray!80,
-    fonttitle=\bfseries,
-    title=#1,
-    sharp corners,
-    boxrule=0.5pt,
-    enhanced,
-    breakable
+	colback=gray!5,
+	colframe=gray!80,
+	fonttitle=\bfseries,
+	title=#1,
+	sharp corners,
+	boxrule=0.5pt,
+	enhanced,
+	breakable
 }
 
 \setlength\titlebox{6cm}
@@ -42,9 +42,10 @@
 \begin{document}
 	\maketitle
 	
-\begin{abstract}
-	Twitter/X Community Notes is a large-scale crowdsourced fact-checking system in which only notes judged helpful by diverse raters are shown publicly. We study whether note helpfulness can be predicted from note text using a range of language-modeling strategies, from prompting to supervised fine-tuning. Using the saved evaluation artifacts from our course project, we compare zero-shot, few-shot, and chain-of-thought prompting with Gemma-3-4B-IT and Qwen3-4B-Instruct, a BERT baseline, and LoRA fine-tuning with Unsloth. On the 246-example test split, zero-shot prompting collapses to the majority class, while chain-of-thought improves F1 to 62.50 for Gemma and 61.49 for Qwen. On the same test split, BERT reaches 63.20 F1, while LoRA-tuned Qwen and Gemma reach 85.90 and 96.03 F1, respectively. These results suggest that parameter-efficient fine-tuning substantially outperforms prompting for this task and that Gemma-3-4B-IT provides the strongest overall performance among the evaluated models. All code and fine-tuned models are publicly available at \href{https://github.com/shahidul034/Predicting-Helpful-Community-Notes-with-Prompting-and-Parameter-Efficient-Fine-Tuning}{GitHub} and Hugging Face (\href{https://huggingface.co/shahidul034/gemma-3-4b-it-CommunityNotesEffectiveness}{Gemma} \& \href{https://huggingface.co/shahidul034/qwen3-4b-instruct-2507-CommunityNotesEffectiveness}{Qwen}).
-\end{abstract}
+	\begin{abstract}
+		Twitter/X Community Notes represents a significant shift toward decentralized, crowdsourced fact-checking, where visibility is reserved for notes judged ``helpful'' by a diverse pool of raters. In this study, we investigate the feasibility of predicting note helpfulness directly from text, comparing a range of modern language modeling strategies. We evaluate the performance of \textbf{Gemma-3-4B-IT} and \textbf{Qwen3-4B-Instruct} across zero-shot, few-shot, and chain-of-thought (CoT) prompting, and benchmark these against a supervised \textbf{BERT} baseline and parameter-efficient fine-tuning (\textbf{PEFT}) via \textbf{LoRA}. 
+		Our experiments reveal a stark performance hierarchy: while zero-shot prompting fails to outperform the majority class, CoT reasoning improves F1 scores to \textbf{62.50} (Gemma) and \textbf{61.49} (Qwen). However, these prompting strategies are substantially outperformed by PEFT; LoRA-tuned Qwen and Gemma models achieve F1 scores of \textbf{85.90} and \textbf{96.03}, respectively, on a shared 246-example test split. These results demonstrate that while instruction-tuned models possess strong general reasoning, targeted fine-tuning is essential for capturing the nuanced stylistic and evidentiary patterns that drive community trust. All code and fine-tuned models are publicly available at \href{https://github.com/shahidul034/Predicting-Helpful-Community-Notes-with-Prompting-and-Parameter-Efficient-Fine-Tuning}{GitHub} and Hugging Face (\href{https://huggingface.co/shahidul034/gemma-3-4b-it-CommunityNotesEffectiveness}{Gemma} \& \href{https://huggingface.co/shahidul034/qwen3-4b-instruct-2507-CommunityNotesEffectiveness}{Qwen}).
+	\end{abstract}
 	
 	\section{Introduction}
 	Online misinformation spreads faster than traditional expert fact-checking can respond. Twitter/X Community Notes offers an alternative moderation mechanism in which users collaboratively write contextual notes for disputed posts, and notes are shown only after receiving helpful ratings from raters with diverse viewpoints \citep{allen2022,saeed2022}. This makes Community Notes an attractive setting for studying how crowd-based fact-checking succeeds in practice.
@@ -59,36 +60,61 @@
 	Our project is complementary to this literature. Rather than analyzing the platform's voting or visibility mechanism, we study whether note text alone contains enough signal to predict eventual helpfulness. Methodologically, we contrast prompting with supervised learning and parameter-efficient fine-tuning, which has become a practical way to adapt open-weight language models for specialized tasks \citep{hu2022lora}.
 	
 	\section{Task and Data}
-	We use the public Community Notes data released by Twitter/X.\footnote{\begin{minipage}{\columnwidth}\small\url{https://communitynotes.twitter.com/guide/en/under-the-hood/download-data}\end{minipage}} The project proposal and implementation focus on note text and note status metadata derived from the dataset's note, rating, and status-history files. Following the original project plan, we treat the task as binary classification: predict whether a note is \textsc{currently\_rated\_helpful} or not, while excluding notes labeled \textsc{needs\_more\_ratings}.
-	
-	The dataset was split into 754 training samples and 246 test samples. All experiments---prompting, BERT fine-tuning, and LoRA fine-tuning---use the same train/test split for consistent comparison.
+	We use the public Community Notes data released by Twitter/X.\footnote{\begin{minipage}{\columnwidth}\small\url{https://communitynotes.twitter.com/guide/en/under-the-hood/download-data}\end{minipage}} Following the original project plan, we treat the task as binary classification: predict whether a note is \textsc{currently\_rated\_helpful} or not, while excluding notes labeled \textsc{needs\_more\_ratings}. The final dataset comprises 1,000 notes covering January--December 2024, split temporally into 754 training samples (January--September 2024) and 246 test samples (October--December 2024). All experiments---prompting, BERT fine-tuning, and LoRA fine-tuning---use the same train/test split for consistent comparison.
 
+	\noindent\textbf{Class Distribution.} The dataset is nearly balanced: the training set contains 49.7\% Helpful (375) and 50.3\% Not Helpful (379) notes, while the test set contains 54.5\% Helpful (134) and 45.5\% Not Helpful (112) notes. The 4.7-percentage-point difference is negligible, ensuring that our F1-score comparisons are not distorted by class imbalance.
+
+	\noindent\textbf{Linguistic Profile.} Community Notes are compact, averaging 31.4 words (SD = 10.2, median = 33). Helpful notes tend to be slightly longer (mean = 32.7 words) than Not Helpful notes (mean = 30.0 words), reflecting the additional detail and structure that effective fact-checking typically requires. The most frequent unigrams are shared across both classes (``claim,'' ``data,'' ``about,'') but their combinatorial patterns differ systematically. Helpful notes are characterized by authoritative, evidence-citing bigrams such as `not consistent with' and `publicly available data,' whereas Not Helpful notes feature hedging phrases such as `hard to say' and `for certain.' Readability, measured by the Flesch--Kincaid grade level, is similar across classes (Helpful: 11.2; Not Helpful: 11.1), indicating that complexity alone does not distinguish effective notes.
+
+	\noindent\textbf{Train-Test Consistency.} The temporal split guarantees zero overlap: no note ID appears in both splits. Statistical properties are consistent across splits: word count (Train mean = 31.4, Test mean = 31.7), readability (Train = 11.2, Test = 11.0), and average ratings per note (Train = 50.1, Test = 50.2).
+
+	\begin{table}[t]
+		\centering
+		\small
+		\setlength{\tabcolsep}{4pt}
+		\begin{tabular}{lcc}
+			\toprule
+			\textbf{Statistic} & \textbf{Train (754)} & \textbf{Test (246)} \\
+			\midrule
+			Helpful (\%) & 49.7\% & 54.5\% \\
+			Misinformed intent (\%) & 53.8\% & 47.2\% \\
+			Mean word count & 31.4 & 31.7 \\
+			Median word count & 33 & 33 \\
+			Mean ratings per note & 50.1 & 50.2 \\
+			FK grade level & 11.2 & 11.0 \\
+			Date range & Jan--Sep 2024 & Oct--Dec 2024 \\
+			\bottomrule
+		\end{tabular}
+		\caption{Dataset statistics and train-test split consistency. The splits are statistically similar across all measured dimensions, confirming a fair comparison setting.}
+		\label{tab:dataset-stats}
+	\end{table}
+	
 	\begin{figure}[ht]
-	\begin{examplebox}{Task Illustration: Helpful vs.\ Not Helpful Community Notes}
-	    \small
-	    \textbf{Original Post (Context):} ``Education reforms have increased school performance by 30\% since implementation began last year.''
-	    
-	    \vspace{0.5em}
-	    \hrule
-	    \vspace{0.5em}
-	    
-	    \begin{minipage}[t]{0.48\textwidth}
-	        \textbf{Note A (Input Text):} \\
-	        ``The claim about education reforms is misleading. Harvard researchers published. Specifically, education reforms decreased by 0.4\% in Q3 2024. as reported by, the original tweet's figures are not consistent with publicly available data from authoritative sources.'' \\
-	        \textbf{Prediction/Target:} \textcolor{green!60!black}{\textsc{Helpful}}
-	    \end{minipage}
-	    \hfill
-	    \vrule
-	    \hfill
-	    \begin{minipage}[t]{0.48\textwidth}
-	        \textbf{Note B (Input Text):} \\
-	        ``The question of education reforms is complex. There are arguments on both sides of this issue. Some experts believe one way, while others disagree. More research is needed to reach a definitive conclusion.'' \\
-	        \vspace{2.5em} \\
-	        \textbf{Prediction/Target:} \textcolor{red!60!black}{\textsc{Not\_Helpful}}
-	    \end{minipage}
-	\end{examplebox}
-	\caption{Real examples from the Community Notes training set. Note A received 99 ratings and was classified as helpful; it cites specific data and authoritative sources. Note B received 100 ratings but was classified as not helpful; it is vague, non-committal, and provides no evidence.}
-	\label{fig:task_example}
+		\begin{examplebox}{Task Illustration: Helpful vs.\ Not Helpful Community Notes}
+			\small
+			\textbf{Original Post (Context):} ``Education reforms have increased school performance by 30\% since implementation began last year.''
+			
+			\vspace{0.5em}
+			\hrule
+			\vspace{0.5em}
+			
+			\begin{minipage}[t]{0.48\textwidth}
+				\textbf{Note A (Input Text):} \\
+				``The claim about education reforms is misleading. Harvard researchers published. Specifically, education reforms decreased by 0.4\% in Q3 2024. as reported by, the original tweet's figures are not consistent with publicly available data from authoritative sources.'' \\
+				\textbf{Prediction/Target:} \textcolor{green!60!black}{\textsc{Helpful}}
+			\end{minipage}
+			\hfill
+			\vrule
+			\hfill
+			\begin{minipage}[t]{0.48\textwidth}
+				\textbf{Note B (Input Text):} \\
+				``The question of education reforms is complex. There are arguments on both sides of this issue. Some experts believe one way, while others disagree. More research is needed to reach a definitive conclusion.'' \\
+				\vspace{2.5em} \\
+				\textbf{Prediction/Target:} \textcolor{red!60!black}{\textsc{Not\_Helpful}}
+			\end{minipage}
+		\end{examplebox}
+		\caption{Real examples from the Community Notes training set. Note A received 99 ratings and was classified as helpful; it cites specific data and authoritative sources. Note B received 100 ratings but was classified as not helpful; it is vague, non-committal, and provides no evidence.}
+		\label{fig:task_example}
 	\end{figure}
 	
 	\section{Methods}
@@ -107,53 +133,53 @@
 	
 	\subsection{LoRA Fine-Tuning}
 	Our primary approach applies parameter-efficient fine-tuning to Gemma-3-4B-IT and Qwen3-4B-Instruct using LoRA \citep{hu2022lora} and the Unsloth training framework \citep{unsloth2024}. This setup aims to preserve the strong prior knowledge of instruction-tuned models while adapting them to the language patterns of helpful and unhelpful notes.
-
-\begin{figure}[ht]
-	\centering
-	\begin{tikzpicture}[
-		node distance=0.8cm and 0.1cm,
-		box/.style={rectangle, rounded corners, draw=black, thick, text width=2.4cm, minimum height=0.8cm, align=center, fill=gray!10, font=\scriptsize},
-		highlight/.style={rectangle, rounded corners, draw=black, thick, text width=3.2cm, minimum height=0.8cm, align=center, fill=blue!10, font=\scriptsize},
-		arrow/.style={thick, ->, >=stealth}
-		]
-		
-		% Top Sections
-		\node[box, text width=3.8cm] (data) {\textbf{Twitter/X Community Notes}\\(Text \& Status Metadata)};
-		\node[box, below=0.6cm of data, text width=3.5cm] (split) {\textbf{Data Split}\\Train: 754 | Test: 246};
-		
-		% Three-way Method Split (Narrowed)
-		\node[box, below=0.8cm of split] (bert) {\textbf{BERT Baseline}\\(Full Fine-Tuning)};
-		\node[box, left=0.1cm of bert] (prompting) {\textbf{Prompting}\\(No Updates)};
-		\node[box, right=0.1cm of bert] (lora) {\textbf{PEFT (LoRA)}\\(Unsloth)};
-
-		% Model Details
-		\node[box, below=0.5cm of prompting] (strategies) {Zero-shot / Few-shot / CoT};
-		\node[box, below=0.5cm of bert] (bert_model) {BERT-base-uncased};
-		\node[box, below=0.5cm of lora] (lora_models) {Gemma-3-4B-IT\\Qwen3-4B-Instruct};
-
-		% Evaluation and Conclusion
-		\node[box, text width=4cm, below=2.2cm of bert_model] (eval) {\textbf{Evaluation on Test Split}\\(Acc, Prec, Rec, F1)};
-		\node[highlight, below=0.6cm of eval] (best) {\textbf{Best Performer}\\LoRA Gemma-3-4B-IT\\(96.03 F1)};
-
-		% Vertical/Diagonal Arrows
-		\draw[arrow] (data) -- (split);
-		\draw[arrow] (split) -- (prompting);
-		\draw[arrow] (split) -- (bert);
-		\draw[arrow] (split) -- (lora);
-		
-		\draw[arrow] (prompting) -- (strategies);
-		\draw[arrow] (bert) -- (bert_model);
-		\draw[arrow] (lora) -- (lora_models);
-		
-		\draw[arrow] (strategies) |- ([yshift=0.3cm]eval.north);
-		\draw[arrow] (bert_model) -- (eval);
-		\draw[arrow] (lora_models) |- ([yshift=0.3cm]eval.north);
-		\draw[arrow] (eval) -- (best);
-		
-	\end{tikzpicture}
-	\caption{Methodology overview for single-column layout.}
-	\label{fig:methodology_flowchart}
-\end{figure}
+	
+	\begin{figure}[ht]
+		\centering
+		\begin{tikzpicture}[
+			node distance=0.8cm and 0.1cm,
+			box/.style={rectangle, rounded corners, draw=black, thick, text width=2.4cm, minimum height=0.8cm, align=center, fill=gray!10, font=\scriptsize},
+			highlight/.style={rectangle, rounded corners, draw=black, thick, text width=3.2cm, minimum height=0.8cm, align=center, fill=blue!10, font=\scriptsize},
+			arrow/.style={thick, ->, >=stealth}
+			]
+			
+			% Top Sections
+			\node[box, text width=3.8cm] (data) {\textbf{Twitter/X Community Notes}\\(Text \& Status Metadata)};
+			\node[box, below=0.6cm of data, text width=3.5cm] (split) {\textbf{Data Split}\\Train: 754 | Test: 246};
+			
+			% Three-way Method Split (Narrowed)
+			\node[box, below=0.8cm of split] (bert) {\textbf{BERT Baseline}\\(Full Fine-Tuning)};
+			\node[box, left=0.1cm of bert] (prompting) {\textbf{Prompting}\\(No Updates)};
+			\node[box, right=0.1cm of bert] (lora) {\textbf{PEFT (LoRA)}\\(Unsloth)};
+			
+			% Model Details
+			\node[box, below=0.5cm of prompting] (strategies) {Zero-shot / Few-shot / CoT};
+			\node[box, below=0.5cm of bert] (bert_model) {BERT-base-uncased};
+			\node[box, below=0.5cm of lora] (lora_models) {Gemma-3-4B-IT\\Qwen3-4B-Instruct};
+			
+			% Evaluation and Conclusion
+			\node[box, text width=4cm, below=2.2cm of bert_model] (eval) {\textbf{Evaluation on Test Split}\\(Acc, Prec, Rec, F1)};
+			\node[highlight, below=0.6cm of eval] (best) {\textbf{Best Performer}\\LoRA Gemma-3-4B-IT\\(96.03 F1)};
+			
+			% Vertical/Diagonal Arrows
+			\draw[arrow] (data) -- (split);
+			\draw[arrow] (split) -- (prompting);
+			\draw[arrow] (split) -- (bert);
+			\draw[arrow] (split) -- (lora);
+			
+			\draw[arrow] (prompting) -- (strategies);
+			\draw[arrow] (bert) -- (bert_model);
+			\draw[arrow] (lora) -- (lora_models);
+			
+			\draw[arrow] (strategies) |- ([yshift=0.3cm]eval.north);
+			\draw[arrow] (bert_model) -- (eval);
+			\draw[arrow] (lora_models) |- ([yshift=0.3cm]eval.north);
+			\draw[arrow] (eval) -- (best);
+			
+		\end{tikzpicture}
+		\caption{Methodology overview for single-column layout.}
+		\label{fig:methodology_flowchart}
+	\end{figure}
 	
 	\section{Experimental Setup}
 	Across experiments, we report accuracy, precision, recall, and F1 score. These metrics are appropriate because false positives and false negatives both matter for note-quality prediction, and F1 provides a balanced summary when the classes may be unevenly distributed.
