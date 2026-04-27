@@ -58,7 +58,7 @@ sc_project/
 
 ### GPU Configuration
 
-This project uses **GPU ID 2** by default (NVIDIA A100 80GB). The environment variables are set automatically by the pipeline script.
+This project uses **GPU ID 3** by default (NVIDIA H200). The environment variables are set automatically by the pipeline script.
 
 ```bash
 # Verify GPU configuration
@@ -66,19 +66,14 @@ This project uses **GPU ID 2** by default (NVIDIA A100 80GB). The environment va
 
 # Or manually check
 nvidia-smi -L
-echo $CUDA_VISIBLE_DEVICES  # Should show: 2
 ```
-
-**Note:** When `CUDA_VISIBLE_DEVICES=2` is set, PyTorch sees it as `device:0` (the first available device).
 
 ### Installation
 
 ```bash
-# Create virtual environment
-python -m venv venv
-source venv/bin/activate  # Linux/Mac
-# or
-venv\Scripts\activate  # Windows
+# Create conda environment
+conda create -n sc_project python=3.12 -y
+conda activate sc_project
 
 # Install dependencies
 pip install -r requirements.txt
@@ -125,13 +120,13 @@ python src/prompting/run_prompting.py --method cot --max-samples 100
 
 ```bash
 # Fine-tune Qwen3-4B-Instruct with LoRA
-# Note: Uses GPU 2 (set via CUDA_VISIBLE_DEVICES)
+# Note: Uses GPU 3 (configured by the pipeline script)
 python src/finetuning/train_lora.py --model qwen3-4b --epochs 3 --batch-size 8
 
 # Fine-tune Gemma-3-4B-IT with LoRA
 python src/finetuning/train_lora.py --model gemma-3-4b --epochs 3 --batch-size 8
 
-# Or use the pipeline script (automatically sets GPU 2)
+# Or use the pipeline script (automatically sets GPU 3)
 ./run_pipeline.sh finetuning
 ```
 
@@ -215,8 +210,6 @@ Test Set (246 notes):
 
 - Accuracy
 - Precision, Recall, F1-score
-- AUC-ROC
-- AUC-PR
 
 ## Team & Contributions
 
@@ -240,8 +233,8 @@ If you use this code or models in your research, please cite:
 ```bibtex
 @inproceedings{madan2025predicting,
   title     = {Predicting Helpful Community Notes with Prompting and Parameter-Efficient Fine-Tuning},
-  author    = {Madan, Mridul and Pashkov, Rafael and Salim, Md Shahidul},
-  booktitle = {Undergraduate Research Symposium},
+  author    = {Salim, Md Shahidul and Madan, Mridul and Pashkov, Rafael},
+  booktitle = {Social Computing},
   year      = {2025},
   institution = {University of Massachusetts Lowell},
   url       = {https://github.com/shahidul034/Predicting-Helpful-Community-Notes-with-Prompting-and-Parameter-Efficient-Fine-Tuning}
