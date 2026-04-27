@@ -1,0 +1,1483 @@
+{
+  "accuracy": 95.52845528455285,
+  "correct": 235,
+  "total": 246,
+  "predictions": [
+    {
+      "index": 0,
+      "generated": "helpful and accurate and accurate.\nnot helpful and inaccurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 1,
+      "generated": "helpful and only.\n\nnot helpful and only.\n\nnot helpful and accurate.\nhelpful and inaccurate.\nnot helpful and accurate.\nnot helpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 2,
+      "generated": "helpful and only.\nnot helpful and accurate.",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 3,
+      "generated": "helpful and only helpful and potentially helpful and accurate and accurate.\nnot helpful and inaccurate.\nnot helpful and accurate.\nnot helpful and accurate.\nnot",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 4,
+      "generated": "helpful and only and only.\nnot helpful and accurate.\nnot helpful and accurate.\n\nnot helpful and accurate.\nnot helpful and accurate.\n\nnot",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 5,
+      "generated": "helpful and accurate and only.\nnot helpful and inaccurate.\nnot helpful and accurate.\nnot helpful and accurate.\nnot helpful and inaccurate.\nnot",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 6,
+      "generated": "helpful and accurate",
+      "expected": "not helpful or inaccurate",
+      "correct": false
+    },
+    {
+      "index": 7,
+      "generated": "helpful and interpretation of copyright\n\nnot helpful and accurate and accurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 8,
+      "generated": "helpful and helpful and answer with.\n\nnot helpful and only.\nnot helpful and inaccurate.\nnot helpful and accurate.\nnot helpful and accurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 9,
+      "generated": "helpful and and accurate and only.\nnot helpful and inaccurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 10,
+      "generated": "helpful and only.\nnot helpful and accurate.\n\nhelpful and accurate.\n\nnot helpful and accurate.\nnot helpful and accurate.not helpful and accurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 11,
+      "generated": "helpful and only.\nnot helpful and accurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 12,
+      "generated": ".\n\nnot helpful and accurate.\nnot helpful and inaccurate.\nnot helpful and inaccurate.\nnot helpful and accurate.\nnot helpful and accurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 13,
+      "generated": "helpful and only helpful and potentially helpful and accurate and accurate.",
+      "expected": "not helpful or inaccurate",
+      "correct": false
+    },
+    {
+      "index": 14,
+      "generated": ".\nmodel helpful and only.\n\nhelpful and accurate and accurate.\n\nnot helpful and inaccurate.\nnot helpful and inaccurate.\nnot helpful and accurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 15,
+      "generated": "helpful and inaccurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 16,
+      "generated": "helpful and helpful and only.\n\nnot helpful and accurate.\nnot helpful and accurate.not helpful and inaccurate.\nnot helpful and accurate.\nhelpful and",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 17,
+      "generated": "helpful and answer with your answer and accurate.\n\nnot helpful and accurate.",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 18,
+      "generated": ".\nnot helpful and inaccurate.\n\nnot helpful and accurate.\nnot helpful and accurate.\nnot helpful and accurate.\nnot helpful and inaccurate.",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 19,
+      "generated": "helpful and accurate.\n\nnot helpful and accurate.\n\nnot helpful and accurate.not_with your answer.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 20,
+      "generated": ".\nnot helpful and inaccurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 21,
+      "generated": "helpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 22,
+      "generated": "helpful and accurate.",
+      "expected": "not helpful or inaccurate",
+      "correct": false
+    },
+    {
+      "index": 23,
+      "generated": "helpful and accurate and only.\n\nnot helpful and accurate.\n\nnot helpful and inaccurate.\n\nnot helpful and accurate.\n\nnot helpful and accurate.\n\nnot",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 24,
+      "generated": "helpful and only.\n\nnot helpful and accurate.\n\nnot helpful and accurate.\n\nnot helpful and accurate.\n\nnot helpful and accurate.not helpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 25,
+      "generated": "helpful and only.\n\nnot helpful and accurate.\nnot helpful and accurate.\n\nnot helpful and accurate.\nnot helpful and accurate.\n\nnot accurate.",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 26,
+      "generated": "helpful and only helpful and accurate.\n\nnot helpful and accurate.\nnot helpful and inaccurate.\nnot helpful and accurate.not helpful and accurate.\nnot",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 27,
+      "generated": "helpful and accurate and only.\nnot helpful and inaccurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 28,
+      "generated": ".\nnot helpful and only.\n\nnot helpful and accurate.\n\nnot helpful and accurate.\nnot helpful and inaccurate.",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 29,
+      "generated": "helpful and only helpful and accurate.\nnot helpful and accurate and inaccurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 30,
+      "generated": "helpful and inaccurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 31,
+      "generated": "helpful and only helpful and accurate.\n\nnot helpful and accurate.",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 32,
+      "generated": "helpful and only and only.\nnot helpful and accurate.\nnot helpful and accurate.\n\nnot helpful and accurate.\nnot helpful and accurate.\n\nnot",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 33,
+      "generated": "helpful and accurate.\nnot helpful and inaccurate.\n\nnot helpful and accurate.\nnot helpful and accurate.\nnot helpful and accurate.\nnot helpful and",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 34,
+      "generated": "helpful and only\n\nnot helpful and accurate.\n\nnot helpful and accurate.\n\nnot helpful and accurate.not helpful and accurate.\nnot helpful and accurate.",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 35,
+      "generated": ".\nnot helpful and inaccurate and you are not helpful and accurate.not helpful and accurate.\nnot helpful and accurate.\nnot helpful and inaccurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 36,
+      "generated": "not helpful and accurate.\n\nnot helpful and accurate.\n\nnot helpful and accurate.\n\nnot helpful and accurate.",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 37,
+      "generated": "not helpful and accurate and potentially.\nnot helpful and inaccurate.\n\nnot helpful and only.\nnot helpful and accurate.\nnot helpful and accurate.",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 38,
+      "generated": "helpful and accurate and only.\nnot helpful and inaccurate.",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 39,
+      "generated": "not helpful and accurate and potentially.\nnot helpful and inaccurate.\n\nnot helpful and only.\nnot helpful and accurate.\nnot helpful and accurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 40,
+      "generated": ".\nnot helpful and potentially helpful and or helpful and accurate.\nnot helpful and accurate.\nnot helpful and accurate.\nnot helpful and inaccurate.not",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 41,
+      "generated": "helpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 42,
+      "generated": "helpful and only and only.\nnot helpful and accurate.\nnot helpful and accurate.\n\nnot helpful and accurate.\n\nnot helpful and accurate.\n\nnot",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 43,
+      "generated": "helpful and answer with your answer and accurate.\n\nnot helpful and accurate.\nnot helpful and inaccurate.\nnot helpful and inaccurate.\nnot helpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 44,
+      "generated": "helpful and only.\nnot helpful and accurate.",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 45,
+      "generated": ".\nnot helpful and inaccurate.\nnot helpful and accurate.\n\nnot helpful and accurate.\nnot helpful and accurate.not helpful and accurate.\n\nnot",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 46,
+      "generated": "helpful and only and only.\nnot helpful and accurate.\nnot helpful and accurate.\n\nnot helpful and accurate.\nnot helpful and accurate.\n\nnot",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 47,
+      "generated": "helpful and accurate.\n\nnot helpful and accurate'.\n\nnot helpful and accurate.\n\nnot helpful and inaccurate.\nnot helpful and.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 48,
+      "generated": "helpful and accurate.\n\nnot helpful and accurate.\n\nnot helpful and accurate.\n\nnot helpful and accurate.not helpful and accurate.not helpful and accurate.",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 49,
+      "generated": "helpful and potentially helpful and only.\n\nhelpful and accurate.\nnot helpful and inaccurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 50,
+      "generated": "helpful and only.\n\nnot helpful and accurate.\nnot helpful and accurate.\n\nnot helpful and accurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 51,
+      "generated": "helpful and accurate and inaccurate.\nnot helpful and inaccurate.not helpful and inaccurate.not helpful and accurate.\nnot helpful and inaccurate.and inaccurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 52,
+      "generated": "helpful and accurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 53,
+      "generated": "helpful and inaccurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 54,
+      "generated": "helpful and helpful and accurate.\nnot helpful and accurate.\n\nnot helpful and accurate.\nnot helpful and accurate.not helpful and accurate.\nnot helpful",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 55,
+      "generated": "helpful and only.\nnot helpful and accurate.\n\nnot helpful and accurate.\nnot helpful and only.",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 56,
+      "generated": "helpful and only.\nnot helpful and accurate.\n\nnot helpful and accurate.\nnot helpful and accurate.\n\nnot helpful and inaccurate.",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 57,
+      "generated": "helpful and answer with your answer and helpful and accurate and accurate and helpful and accurate.\nnot helpful and inaccurate.",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 58,
+      "generated": "helpful and accurate.\n\nnot helpful and accurate.\n\nnot helpful and accurate.not_with your answer.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 59,
+      "generated": "ingly and or not helpful and only.\nhelpful and accurate.\nnot helpful and accurate.\nnot helpful and inaccurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 60,
+      "generated": ".\nnot helpful and inaccurate.\nnot helpful and accurate.not helpful and accurate.not helpful and accurate.not helpful and inaccurate.not helpful and inaccurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 61,
+      "generated": "helpful and only helpful and accurate.\nnot helpful and inaccurate.",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 62,
+      "generated": ".\nnot helpful and only helpful and accurate.\nnot helpful and accurate.\nnot helpful and inaccurate.\nnot helpful and inaccurate.\nnot helpful and",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 63,
+      "generated": "helpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 64,
+      "generated": "or not helpful and accurate.\n\nnot helpful and accurate.\n\nnot helpful and accurate.\n\nnot helpful and accurate.\n\nnot helpful and accurate.accurate.",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 65,
+      "generated": ".\nnot helpful and only helpful and accurate.\nnot helpful and accurate.\nnot helpful and inaccurate.\nnot helpful and inaccurate.\nnot helpful and",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 66,
+      "generated": "helpful and accurate",
+      "expected": "not helpful or inaccurate",
+      "correct": false
+    },
+    {
+      "index": 67,
+      "generated": "helpful and only.\nnot helpful and inaccurate.",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 68,
+      "generated": ".\nnot helpful and only.\n\nhelpful and accurate and accurate.\n\nnot helpful and inaccurate.\nnot helpful and inaccurate.\nnot helpful and accurate.",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 69,
+      "generated": "helpful and accurate.\n\nnot helpful and accurate.\n\nnot helpful and only helpful and inaccurate.",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 70,
+      "generated": "helpful and only.\nnot helpful and accurate.\n\nnot helpful and accurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 71,
+      "generated": ".",
+      "expected": "not helpful or inaccurate",
+      "correct": false
+    },
+    {
+      "index": 72,
+      "generated": "helpful and only and inaccurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 73,
+      "generated": "helpful and only and only.\nnot helpful and accurate.\nnot helpful and accurate.\n\nnot helpful and accurate.\nnot helpful and accurate.\n\nnot",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 74,
+      "generated": ".\nnot helpful and only.\n\nnot helpful and accurate.\n\nhelpful and accurate.\nnot helpful and inaccurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 75,
+      "generated": "helpful and accurate and only.\nnot helpful and inaccurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 76,
+      "generated": "helpful and only helpful and accurate.\n\nnot helpful and accurate.",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 77,
+      "generated": "helpful and only helpful and potentially helpful and accurate and accurate.\nnot helpful and inaccurate.\nnot helpful and accurate.\nnot helpful and accurate.\nnot",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 78,
+      "generated": "helpful and only helpful and accurate.\nnot helpful and accurate and inaccurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 79,
+      "generated": "and accurate and only.\nnot helpful and inaccurate.",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 80,
+      "generated": "helpful and only.\n\nnot helpful and accurate.\nnot helpful and accurate.\n\nnot helpful and accurate.\nnot helpful and accurate.\n\nnot accurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 81,
+      "generated": "or not helpful and accurate.",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 82,
+      "generated": "not helpful and inaccurate and you are not helpful and accurate.\n\nnot helpful and accurate.\n\nnot helpful and accurate.not helpful and accurate.\n\nnot",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 83,
+      "generated": "helpful and only.\nnot helpful and accurate.\n\nnot helpful and accurate.\nnot helpful and only.\nnot helpful and accurate.",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 84,
+      "generated": "helpful and only.\n\nnot helpful and accurate.\n\nnot helpful and accurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 85,
+      "generated": "helpful and only.\n\nnot helpful and only\n\nnot helpful and accurate.",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 86,
+      "generated": "helpful and accurate and accurate.\n\nnot helpful and accurate.\n\nnot helpful and accurate.\n\nnot helpful and accurate.\nnot helpful and accurate.\nnot",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 87,
+      "generated": "helpful and accurate.\n\nnot helpful and accurate.",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 88,
+      "generated": "helpful and accurate.\n\nnot helpful and accurate.\n\nnot helpful and inaccurate.\nnot helpful and inaccurate.\nnot helpful and accurate.\nnot helpful and",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 89,
+      "generated": "helpful and or not helpful and accurate.\n\nnot helpful and accurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 90,
+      "generated": "helpful and only\n\nnot helpful and accurate and accurate.\nnot helpful and accurate.\n\nnot helpful and accurate.not helpful and accurate.not helpful and accurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 91,
+      "generated": "helpful and only.\nnot helpful and accurate.\n\nnot helpful and accurate.\n\nnot helpful and accurate.not helpful and accurate.not helpful and accurate.",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 92,
+      "generated": "helpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 93,
+      "generated": "not helpful and accurate.\nnot helpful and inaccurate.\n\nnot helpful and accurate.not helpful and accurate.\nnot helpful and inaccurate.not accurate.",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 94,
+      "generated": "helpful and only.\n\nnot helpful and accurate.\nnot helpful and accurate.\n\nnot helpful and accurate.\nnot helpful and accurate.\n\nnot accurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 95,
+      "generated": "helpful and only\n\nnot helpful and accurate.\n\nnot helpful and accurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 96,
+      "generated": "helpful and accurate.\n\nnot helpful and accurate.\n\nnot helpful and accurate.not helpful and accurate.\nnot helpful and accurate.not helpful and accurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 97,
+      "generated": "helpful and only helpful and accurate.\nnot helpful and accurate and inaccurate.\nnot helpful and accurate.\nnot helpful and accurate.\nnot helpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 98,
+      "generated": "helpful and accurate and only.\nnot helpful and inaccurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 99,
+      "generated": "helpful and inaccurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 100,
+      "generated": "ing and answer with.\n\nnot helpful and only.\n\nnot helpful and inaccurate.\nnot helpful and accurate.\nnot helpful and inaccurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 101,
+      "generated": "helpful and only.\n\nnot helpful and accurate.\nnot helpful and accurate.\n\nnot helpful and accurate.\nnot helpful and accurate.\n\nnot accurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 102,
+      "generated": "helpful and accurate.\n\nnot helpful and accurate.\n\nnot helpful and inaccurate.\nnot helpful and inaccurate.\nnot helpful and accurate.\nnot helpful and",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 103,
+      "generated": "helpful and accurate and only.\nnot helpful and inaccurate.\nnot helpful and accurate.\nnot helpful and accurate.\nnot helpful and accurate.\nnot",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 104,
+      "generated": "not helpful and accurate and inaccurate.\nnot helpful and accurate and inaccurate.\nnot helpful and accurate.\nnot helpful and accurate.\nnot helpful and",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 105,
+      "generated": "helpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 106,
+      "generated": "helpful and only.\nnot helpful and inaccurate.",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 107,
+      "generated": "not helpful and accurate and potentially.\nnot helpful and inaccurate.not helpful and only.\nnot helpful and accurate.\nnot helpful and accurate.not",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 108,
+      "generated": "helpful and only helpful and accurate.\nnot helpful and accurate.\n\nnot helpful and accurate.\nnot helpful and accurate.\nnot helpful and accurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 109,
+      "generated": "not helpful and accurate.\nnot helpful and accurate.not helpful and inaccurate.\nnot helpful and accurate.\nnot helpful and accurate.and accurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 110,
+      "generated": "not helpful or inaccurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 111,
+      "generated": "not helpful and accurate and potentially.\nnot helpful and inaccurate.",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 112,
+      "generated": "not helpful and accurate.\nnot helpful and inaccurate.\nnot helpful and inaccurate.\nnot helpful and accurate.\nnot helpful and inaccurate.\nnot",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 113,
+      "generated": "helpful and only and accurate.\nnot helpful and accurate.\n\nnot helpful and inaccurate.\nnot helpful and inaccurate.not helpful and accurate.\nnot helpful",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 114,
+      "generated": "helpful and only\n\nnot helpful and accurate and accurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 115,
+      "generated": "and accurate and only.\n\nnot helpful and inaccurate.\nnot helpful and accurate.\nnot helpful and only.\nnot helpful and inaccurate.",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 116,
+      "generated": "helpful and only and only.\nnot helpful and accurate.\nnot helpful and accurate.\n\nnot helpful and accurate.\nnot helpful and accurate.\n\nnot",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 117,
+      "generated": ".\nnot helpful and only.\n\nnot helpful and accurate and accurate.\nnot helpful and only helpful and inaccurate.",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 118,
+      "generated": "helpful and accurate and only.\nnot helpful and inaccurate.\nnot helpful and accurate.\nnot helpful and accurate.\nnot helpful and accurate.\nnot",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 119,
+      "generated": "helpful and only and only.\nnot helpful and accurate.\nnot helpful and accurate.\n\nnot helpful and accurate.\nnot helpful and accurate.\n\nnot",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 120,
+      "generated": "helpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 121,
+      "generated": "helpful and only helpful and only.\n\nnot helpful and accurate.\nnot helpful and accurate.not helpful and only.\nnot helpful and accurate.\nnot",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 122,
+      "generated": "helpful and or not helpful and accurate.\n\nnot helpful and accurate.\n\nnot helpful and accurate.not helpful and accurate.\n\nnot helpful and accurate.not",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 123,
+      "generated": "helpful and accurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 124,
+      "generated": "helpful and only.\nnot helpful and inaccurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 125,
+      "generated": "helpful and dates and helpful and accurate.\n\nhelpful and accurate.\n\nhelpful and inaccurate.\nhelpful and inaccurate.\nnot helpful and inaccurate.not helpful",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 126,
+      "generated": "not helpful and accurate.\nnot helpful and inaccurate.\nnot helpful and inaccurate.\nnot helpful and accurate.\nnot helpful and inaccurate.\nnot",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 127,
+      "generated": "helpful and only.",
+      "expected": "helpful and accurate",
+      "correct": false
+    },
+    {
+      "index": 128,
+      "generated": "helpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 129,
+      "generated": "helpful and accurate.\n\nnot helpful and accurate.\n\nnot helpful and accurate.\n\nnot helpful and accurate.\n\nnot helpful and accurate.not helpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 130,
+      "generated": "helpful and only helpful and potentially helpful and accurate and accurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 131,
+      "generated": "helpful and only.\nnot helpful and inaccurate.",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 132,
+      "generated": "helpful and accurate and accurate.\nnot helpful and accurate and inaccurate.\nnot helpful and accurate.\nnot helpful and accurate.\nnot helpful and accurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 133,
+      "generated": "helpful and or not helpful and answer with.\n\nnot helpful and only.\nnot helpful and inaccurate.\nnot helpful and accurate.\nnot helpful and accurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 134,
+      "generated": "not helpful and accurate and inaccurate.\nnot helpful and accurate and inaccurate.\nnot helpful and accurate.\nnot helpful and accurate.\nnot helpful and",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 135,
+      "generated": "helpful and only and only.\nnot helpful and accurate.\nnot helpful and accurate.\n\nnot helpful and accurate.\nnot helpful and accurate.\n\nnot",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 136,
+      "generated": "helpful and accurate.\nnot helpful and inaccurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 137,
+      "generated": "helpful and only.\n\nnot helpful and answer with only.\n\nnot helpful and only.\nnot helpful and inaccurate.",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 138,
+      "generated": ".\n\nnot helpful and accurate.\nnot helpful and inaccurate.\nnot helpful and inaccurate.\nnot helpful and accurate.\nnot accurate.not helpful and",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 139,
+      "generated": "helpful and only.\nnot helpful and accurate.\n\nnot helpful and accurate.\n\nnot helpful and your answer with only.\n\nnot helpful and accurate.not",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 140,
+      "generated": "helpful and only.\n\nnot helpful and accurate.\nnot helpful and accurate.\n\nnot helpful and accurate.\nnot helpful and accurate.\n\nnot accurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 141,
+      "generated": "helpful and only.\n\nnot helpful and accurate.\nnot helpful and accurate.\n\nnot helpful and accurate.\nnot helpful and accurate.\n\nnot accurate.",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 142,
+      "generated": "helpful and only your answer only.\n\nnot helpful and accurate.\n\nnot helpful and accurate.\nnot helpful and accurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 143,
+      "generated": "helpful and only.\n\nhelpful and accurate.\n\nhelpful and accurate.\nhelpful and inaccurate.\nhelpful and inaccurate.\nnot helpful and accurate.\nhelpful",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 144,
+      "generated": "helpful and only.\n\nnot helpful and only.\nnot helpful and accurate.\n\nnot helpful and accurate.\n\nnot helpful and accurate.not helpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 145,
+      "generated": "or not helpful and accurate.\nnot helpful and accurate.\nnot helpful and accurate.\nnot helpful and accurate.\n\nnot helpful and accurate. accurate.",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 146,
+      "generated": "helpful and only.\n\nnot helpful and only.\nnot helpful and accurate.\n\nnot helpful and accurate.\n\nnot helpful and accurate.not helpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 147,
+      "generated": "helpful and only.\n\nnot helpful and only.\nnot helpful and accurate.\n\nnot helpful and accurate.\n\nnot helpful and accurate.not helpful and accurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 148,
+      "generated": "helpful and accurate.\n\nnot helpful and accurate.\n\nnot helpful and accurate.\n\nnot helpful and accurate.\n\nnot helpful and accurate.not helpful and accurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 149,
+      "generated": ".\nnot helpful and only.\nnot helpful and accurate.not helpful and accurate.not helpful and accurate.not helpful and inaccurate.not helpful and inaccurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 150,
+      "generated": "helpful and accurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 151,
+      "generated": "not helpful and accurate.\nnot helpful and accurate.not helpful and inaccurate.\nnot helpful and accurate.\nnot helpful and accurate.not helpful and",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 152,
+      "generated": "helpful and helpful and answer with.\n\nnot helpful and inaccurate.\n\nnot helpful and inaccurate.\nnot helpful and accurate.\nnot helpful and accurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 153,
+      "generated": "helpful and only helpful and accurate.\n\nnot helpful and accurate.",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 154,
+      "generated": "helpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 155,
+      "generated": "helpful and only.\n\nnot helpful and accurate.\nnot helpful and accurate.\n\nnot helpful and accurate.\nnot helpful and inaccurate.not helpful and inaccurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 156,
+      "generated": "helpful and answer with your answer and accurate.\n\nnot helpful and accurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 157,
+      "generated": "helpful and only\n\nhelpful and accurate.\nhelpful and accurate.\n\nhelpful and accurate.\nhelpful and inaccurate.\nhelpful and inaccurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 158,
+      "generated": "helpful and only and only.\nnot helpful and accurate.\n\nnot helpful and accurate.\n\nnot helpful and accurate.\nnot helpful and accurate.\n\nnot",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 159,
+      "generated": "helpful and only your answer only.\n\nnot helpful and accurate.\n\nnot helpful and accurate.\nnot helpful and accurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 160,
+      "generated": ".\nnot helpful and inaccurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 161,
+      "generated": "helpful and only helpful and accurate.\n\nnot helpful and accurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 162,
+      "generated": "helpful and you thinkin helpful and accurate.\n\nnot helpful and accurate.\n\nnot helpful and accurate.\n\nnot helpful and accurate.\n\nnot helpful and accurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 163,
+      "generated": "helpful and only.\n\nnot helpful and accurate.\n\nnot helpful and accurate.\nnot helpful and accurate and accurate and accurate.not helpful and accurate and accurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 164,
+      "generated": "or not helpful and accurate.",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 165,
+      "generated": "helpful and answer or not helpful and accurate.\n\nnot helpful and accurate.\n\nnot helpful and accurate.\n\nnot helpful and accurate.",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 166,
+      "generated": "helpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 167,
+      "generated": ".\nnot helpful and accurate.\n\nnot helpful and accurate.\n\nnot helpful and inaccurate.\nnot helpful and inaccurate.\nnot helpful and accurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 168,
+      "generated": "helpful and accurate.\n\nnot helpful and accurate.\n\nnot helpful and accurate.\n\nnot helpful and accurate.not helpful and accurate.not helpful and accurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 169,
+      "generated": "helpful and only.\nnot helpful and inaccurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 170,
+      "generated": "helpful and accurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 171,
+      "generated": ".\nnot helpful and inaccurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 172,
+      "generated": "helpful and only helpful and accurate.\n\nnot helpful and accurate.",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 173,
+      "generated": "not helpful and accurate.\nnot helpful and inaccurate.\nnot helpful and inaccurate.\nnot helpful and accurate.\nnot helpful and inaccurate.\nnot",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 174,
+      "generated": "helpful and accurate.\n\nnot helpful and accurate.\nnot helpful and inaccurate.\nnot helpful and inaccurate.\nnot helpful and accurate.\nnot helpful and",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 175,
+      "generated": "helpful and only helpful and not helpful and accurate and accurate.",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 176,
+      "generated": "helpful and only.\n\nnot helpful and accurate.\nhelpful and inaccurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 177,
+      "generated": "helpful and only helpful and accurate.\nnot helpful and accurate and inaccurate.",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 178,
+      "generated": "helpful and only helpful and accurate.\nnot helpful and inaccurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 179,
+      "generated": "helpful and only helpful and accurate.\n\nnot helpful and accurate.\nnot helpful and inaccurate.\nnot helpful and accurate.not helpful and accurate.\nnot",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 180,
+      "generated": "helpful and only helpful and accurate.\n\nnot helpful and accurate.",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 181,
+      "generated": ".\n\nnot helpful and accurate.\nnot helpful and inaccurate.\nnot helpful and inaccurate.\nnot helpful and accurate.\nnot helpful and inaccurate.",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 182,
+      "generated": "not helpful and accurate.\nnot helpful and accurate.\nnot helpful and accurate.\nnot helpful and accurate.\nnot helpful and accurate.not accurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 183,
+      "generated": "helpful and accurate.",
+      "expected": "not helpful or inaccurate",
+      "correct": false
+    },
+    {
+      "index": 184,
+      "generated": "helpful and accurate and only.\nnot helpful and accurate.\n\nnot helpful and accurate.\n\nnot helpful and accurate.not helpful and accurate.\n\nnot helpful",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 185,
+      "generated": "helpful and only and only.\nnot helpful and accurate.\nnot helpful and accurate.\n\nnot helpful and accurate.\nnot helpful and accurate.\n\nnot",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 186,
+      "generated": "and only.\n\nnot helpful and potentially.\nnot helpful and potentially_or not helpful and only.\nnot helpful and accurate.\nnot helpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 187,
+      "generated": "helpful and accurate",
+      "expected": "not helpful or inaccurate",
+      "correct": false
+    },
+    {
+      "index": 188,
+      "generated": "helpful and only.\nnot helpful and only\n\nnot helpful and accurate.\n\nnot helpful and accurate.\n\nnot helpful and accurate.not helpful and accurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 189,
+      "generated": "not helpful and accurate.\n\nnot helpful and it is not helpful and accurate.\nnot helpful and inaccurate.not helpful and inaccurate.not accurate.not",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 190,
+      "generated": "helpful and accurate and accurate.\n\nnot helpful and accurate.\n\nnot helpful and accurate.\n\nnot helpful and accurate.\nnot helpful and accurate.\nnot",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 191,
+      "generated": "or not helpful and accurate.",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 192,
+      "generated": "helpful and only.\nnot helpful and inaccurate.",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 193,
+      "generated": "not helpful and accurate.\n\nnot helpful and accurate.\nnot helpful and accurate.\n\nnot helpful and accurate.",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 194,
+      "generated": "not helpful and accurate.\nnot helpful and accurate.\nnot helpful and accurate.\nnot helpful and accurate.\nnot helpful and accurate.not accurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 195,
+      "generated": "not helpful and accurate and potentially.\nnot helpful and inaccurate.\n\nnot helpful and only.\nnot helpful and accurate.\nnot helpful and accurate.",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 196,
+      "generated": "helpful and only helpful and inaccurate.\nnot helpful and inaccurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 197,
+      "generated": "not helpful and accurate.\nnot helpful and accurate.not helpful and inaccurate.\nnot helpful and accurate.\nnot helpful and accurate.not helpful and",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 198,
+      "generated": "and publicly available in the opposite.\n\nnot helpful and only.\n\nnot helpful and inaccurate.\nnot helpful and accurate.\nnot helpful and accurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 199,
+      "generated": "helpful and only.\nnot helpful and inaccurate.",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 200,
+      "generated": ".\n\nnot helpful and inaccurate.\nnot helpful and inaccurate_or not helpful and accurate.not helpful and accurate.\nnot helpful and accurate and inaccurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 201,
+      "generated": "helpful and only helpful and accurate.\n\nnot helpful and accurate.\nnot helpful and inaccurate.\nnot helpful and inaccurate.\nnot helpful and accurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 202,
+      "generated": "not helpful or inaccurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 203,
+      "generated": ".\nnot helpful and accurate and inaccurate.",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 204,
+      "generated": "helpful and only.\n\nnot helpful and only.\n\nnot helpful and accurate.\nnot helpful and inaccurate.not helpful and accurate.not helpful and accurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 205,
+      "generated": "not helpful and accurate.\nnot helpful and accurate.\n\nnot helpful and accurate.\nnot helpful and accurate.\nnot helpful and accurate.not accurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 206,
+      "generated": "helpful and only helpful and accurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 207,
+      "generated": "helpful and only.\n\nnot helpful and accurate.\nnot helpful and accurate.\n\nnot helpful and accurate.\nnot helpful and accurate.\n\nnot accurate.",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 208,
+      "generated": "not helpful and accurate.\nnot helpful and accurate.not helpful and inaccurate.\nnot helpful and accurate.\nnot helpful and accurate.not helpful and",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 209,
+      "generated": "helpful and only.\nnot helpful and inaccurate.",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 210,
+      "generated": "helpful and only.\n\nnot helpful and only.\n\nnot helpful and only helpful and the given inot helpful and accurate.not helpful and accurate.\nnot",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 211,
+      "generated": ".\nnot helpful and inaccurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 212,
+      "generated": "helpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 213,
+      "generated": "not helpful and only.\n\nnot helpful and accurate.\nnot helpful and accurate.\n\nnot helpful and accurate.not helpful and accurate.not accurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 214,
+      "generated": "helpful and only.\nnot helpful and accurate.\n\nnot helpful and accurate.\n\nnot helpful and accurate.\n\nnot helpful and accurate.",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 215,
+      "generated": "helpful and only\n\nnot helpful and accurate.\n\nnot helpful and accurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 216,
+      "generated": "not helpful and inaccurate and you answer and only.\nnot helpful and accurate.\nnot helpful and accurate.\nnot helpful and inaccurate.not helpful and",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 217,
+      "generated": "helpful and only helpful and accurate.\nnot helpful and accurate and you.",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 218,
+      "generated": "helpful and only.\nnot helpful and inaccurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 219,
+      "generated": "helpful and only.\nnot helpful and inaccurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 220,
+      "generated": "helpful and only your answer and accurate.\n\nnot helpful and accurate.\n\nnot helpful and accurate.\n\nnot helpful and accurate.\nnot helpful and accurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 221,
+      "generated": "helpful and accurate.\n\nnot helpful and accurate.\n\nnot helpful and accurate.not helpful and inaccurate.\nnot helpful and accurate.\nnot helpful and inaccurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 222,
+      "generated": "helpful and accurate and only.\nnot helpful and inaccurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 223,
+      "generated": "helpful and only.\nnot helpful and inaccurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 224,
+      "generated": "helpful and only helpful and accurate.\n\nhelpful and accurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 225,
+      "generated": "helpful and only.\n\nnot helpful and accurate.\n\nnot helpful and accurate.\nnot helpful and inaccurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 226,
+      "generated": "or not helpful and accurate.\n\nnot helpful and accurate.\n\nnot helpful and accurate.\n\nnot helpful and accurate.\n\nnot helpful and accurate.accurate.",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 227,
+      "generated": "helpful and date.\n\nnot helpful and accurate.\n\nhelpful and date.\n\nhelpful and accurate.\nhelpful and accurate.\nhelpful and accurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 228,
+      "generated": ".\nnot helpful and inaccurate.\n\nnot helpful and accurate.\nnot helpful and accurate.\nnot helpful and accurate.\nnot helpful and inaccurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 229,
+      "generated": "not helpful and accurate.\nnot helpful and only.\nnot helpful and only.\nnot helpful and accurate.\nnot helpful and accurate.\nnot",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 230,
+      "generated": "helpful and only.\n\nnot helpful and accurate.\nnot helpful and accurate.\n\nnot helpful and accurate.\nnot helpful and accurate.\n\nnot accurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 231,
+      "generated": "helpful and accurate and only.\nnot helpful and inaccurate.\nnot helpful and accurate.\nnot helpful and accurate.\nnot helpful and accurate.\nnot",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 232,
+      "generated": "helpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 233,
+      "generated": ".",
+      "expected": "not helpful or inaccurate",
+      "correct": false
+    },
+    {
+      "index": 234,
+      "generated": "and only.\nnot helpful and accurate.\n\nnot helpful and only.\n\nnot helpful and accurate.\nnot helpful and accurate.\n\nnot helpful and accurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 235,
+      "generated": "helpful and only helpful and potentially helpful and accurate and accurate.",
+      "expected": "not helpful or inaccurate",
+      "correct": false
+    },
+    {
+      "index": 236,
+      "generated": "helpful and only helpful and accurate.\n\nnot helpful and accurate.\nnot helpful and inaccurate.\nnot helpful and inaccurate.\nnot helpful and accurate.",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 237,
+      "generated": "not helpful and inaccurate.\n\nnot helpful and accurate.\nnot helpful and accurate.\nnot helpful and accurate.\nnot helpful and accurate.not helpful",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 238,
+      "generated": ".\nnot helpful and inaccurate.\n\nhelpful and accurate.\nnot helpful and accurate.\n\nnot helpful and accurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 239,
+      "generated": "helpful and accurate and accurate and accurate.",
+      "expected": "not helpful or inaccurate",
+      "correct": false
+    },
+    {
+      "index": 240,
+      "generated": "not helpful or inaccurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 241,
+      "generated": "helpful and only.\n\nnot helpful and only.\n\nnot helpful and only helpful and clearly inaccurate.",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 242,
+      "generated": "helpful and only\n\nnot helpful and accurate.\n\nnot helpful and accurate.",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 243,
+      "generated": "helpful and only.\nnot helpful and inaccurate.",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 244,
+      "generated": "not helpful and accurate and inaccurate.\nnot helpful and inaccurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 245,
+      "generated": "or not helpful and accurate.",
+      "expected": "helpful and accurate",
+      "correct": true
+    }
+  ]
+}

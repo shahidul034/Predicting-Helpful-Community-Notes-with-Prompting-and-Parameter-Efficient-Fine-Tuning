@@ -1,0 +1,26 @@
+{
+  "model": "unsloth/gemma-3-4b-it",
+  "max_seq_length": 2048,
+  "lora_r": 16,
+  "lora_alpha": 16,
+  "epochs": 3,
+  "learning_rate": 0.0002,
+  "batch_size": 2,
+  "gradient_accumulation_steps": 4,
+  "train_samples": 754,
+  "test_samples": 246,
+  "test_accuracy": 95.52845528455285,
+  "training_metrics": {
+    "train_runtime": 433.9698,
+    "train_samples_per_second": 5.212,
+    "train_steps_per_second": 0.657,
+    "total_flos": 6525454558197120.0,
+    "train_loss": 0.3893612547924644,
+    "epoch": 3.0
+  },
+  "test_precision": 0.9301,
+  "test_recall": 0.9925,
+  "test_f1": 0.9603,
+  "test_auc_roc": 0.9516,
+  "test_auc_pr": 0.9272
+}

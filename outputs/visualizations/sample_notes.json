@@ -1,0 +1,56 @@
+{
+  "helpful": [
+    {
+      "note_id": "note_00000000",
+      "summary": "According to the IPCC, global temperatures have risen by 1.1\u00b0C since pre-industrial times.",
+      "classification": "MISINFORMED_OR_POTENTIALLY_MISLEADING"
+    },
+    {
+      "note_id": "note_00000001",
+      "summary": "Multiple peer-reviewed studies have found no link between vaccines and autism.",
+      "classification": "NOT_MISLEADING"
+    },
+    {
+      "note_id": "note_00000002",
+      "summary": "According to the IPCC, global temperatures have risen by 1.1\u00b0C since pre-industrial times.",
+      "classification": "MISINFORMED_OR_POTENTIALLY_MISLEADING"
+    },
+    {
+      "note_id": "note_00000011",
+      "summary": "Multiple peer-reviewed studies have found no link between vaccines and autism.",
+      "classification": "MISINFORMED_OR_POTENTIALLY_MISLEADING"
+    },
+    {
+      "note_id": "note_00000012",
+      "summary": "According to the CDC, over 95% of Americans are now fully vaccinated against COVID-19.",
+      "classification": "NOT_MISLEADING"
+    }
+  ],
+  "not_helpful": [
+    {
+      "note_id": "note_00000003",
+      "summary": "The media is lying about this, trust me.",
+      "classification": "NOT_MISLEADING"
+    },
+    {
+      "note_id": "note_00000004",
+      "summary": "Everyone knows this is true, why are you even questioning it?",
+      "classification": "NOT_MISLEADING"
+    },
+    {
+      "note_id": "note_00000006",
+      "summary": "This is garbage and should be deleted immediately.",
+      "classification": "NOT_MISLEADING"
+    },
+    {
+      "note_id": "note_00000008",
+      "summary": "Only idiots would believe this kind of nonsense.",
+      "classification": "MISINFORMED_OR_POTENTIALLY_MISLEADING"
+    },
+    {
+      "note_id": "note_00000009",
+      "summary": "This is garbage and should be deleted immediately.",
+      "classification": "NOT_MISLEADING"
+    }
+  ]
+}

@@ -1,0 +1,1729 @@
+{
+  "accuracy": 82.11382113821138,
+  "correct": 202,
+  "total": 246,
+  "predictions": [
+    {
+      "index": 0,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 1,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 2,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "not helpful or inaccurate",
+      "correct": false
+    },
+    {
+      "index": 3,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "not helpful or inaccurate",
+      "correct": false
+    },
+    {
+      "index": 4,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 5,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 6,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "not helpful or inaccurate",
+      "correct": false
+    },
+    {
+      "index": 7,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 8,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 9,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 10,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 11,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 12,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 13,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 14,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "not helpful or inaccurate",
+      "correct": false
+    },
+    {
+      "index": 15,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 16,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 17,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "not helpful or inaccurate",
+      "correct": false
+    },
+    {
+      "index": 18,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "not helpful or inaccurate",
+      "correct": false
+    },
+    {
+      "index": 19,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 20,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 21,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 22,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "not helpful or inaccurate",
+      "correct": false
+    },
+    {
+      "index": 23,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 24,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 25,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 26,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 27,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 28,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "not helpful or inaccurate",
+      "correct": false
+    },
+    {
+      "index": 29,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 30,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 31,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "not helpful or inaccurate",
+      "correct": false
+    },
+    {
+      "index": 32,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 33,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "not helpful or inaccurate",
+      "correct": false
+    },
+    {
+      "index": 34,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 35,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 36,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 37,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "not helpful or inaccurate",
+      "correct": false
+    },
+    {
+      "index": 38,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 39,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 40,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 41,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 42,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 43,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 44,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 45,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 46,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 47,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 48,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 49,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 50,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 51,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 52,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 53,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "</tool_call>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 54,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 55,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 56,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 57,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "not helpful or inaccurate",
+      "correct": false
+    },
+    {
+      "index": 58,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 59,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 60,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "not helpful or inaccurate",
+      "correct": false
+    },
+    {
+      "index": 61,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 62,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 63,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 64,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 65,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 66,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 67,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "not helpful or inaccurate",
+      "correct": false
+    },
+    {
+      "index": 68,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "not helpful or inaccurate",
+      "correct": false
+    },
+    {
+      "index": 69,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 70,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 71,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 72,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 73,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "not helpful or inaccurate",
+      "correct": false
+    },
+    {
+      "index": 74,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 75,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 76,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "not helpful or inaccurate",
+      "correct": false
+    },
+    {
+      "index": 77,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "not helpful or inaccurate",
+      "correct": false
+    },
+    {
+      "index": 78,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 79,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "not helpful or inaccurate",
+      "correct": false
+    },
+    {
+      "index": 80,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 81,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 82,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "not helpful or inaccurate",
+      "correct": false
+    },
+    {
+      "index": 83,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 84,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 85,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "not helpful or inaccurate",
+      "correct": false
+    },
+    {
+      "index": 86,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 87,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 88,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "not helpful or inaccurate",
+      "correct": false
+    },
+    {
+      "index": 89,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 90,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 91,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 92,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 93,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 94,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 95,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 96,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 97,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 98,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 99,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 100,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 101,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 102,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 103,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 104,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 105,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 106,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "not helpful or inaccurate",
+      "correct": false
+    },
+    {
+      "index": 107,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 108,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 109,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 110,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 111,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "not helpful or inaccurate",
+      "correct": false
+    },
+    {
+      "index": 112,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "not helpful or inaccurate",
+      "correct": false
+    },
+    {
+      "index": 113,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 114,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 115,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "not helpful or inaccurate",
+      "correct": false
+    },
+    {
+      "index": 116,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 117,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "not helpful or inaccurate",
+      "correct": false
+    },
+    {
+      "index": 118,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 119,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 120,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 121,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 122,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 123,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 124,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 125,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 126,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 127,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 128,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 129,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 130,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 131,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 132,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 133,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "not helpful or inaccurate",
+      "correct": false
+    },
+    {
+      "index": 134,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 135,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 136,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 137,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "not helpful or inaccurate",
+      "correct": false
+    },
+    {
+      "index": 138,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 139,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 140,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 141,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 142,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 143,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 144,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 145,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 146,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 147,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 148,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 149,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 150,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 151,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 152,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 153,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "not helpful or inaccurate",
+      "correct": false
+    },
+    {
+      "index": 154,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 155,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 156,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 157,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 158,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 159,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 160,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 161,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 162,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 163,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 164,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 165,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 166,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 167,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 168,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 169,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 170,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 171,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 172,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 173,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "not helpful or inaccurate",
+      "correct": false
+    },
+    {
+      "index": 174,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "not helpful or inaccurate",
+      "correct": false
+    },
+    {
+      "index": 175,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "not helpful or inaccurate",
+      "correct": false
+    },
+    {
+      "index": 176,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 177,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 178,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 179,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "not helpful or inaccurate",
+      "correct": false
+    },
+    {
+      "index": 180,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "not helpful or inaccurate",
+      "correct": false
+    },
+    {
+      "index": 181,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "not helpful or inaccurate",
+      "correct": false
+    },
+    {
+      "index": 182,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 183,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "not helpful or inaccurate",
+      "correct": false
+    },
+    {
+      "index": 184,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 185,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 186,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 187,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "not helpful or inaccurate",
+      "correct": false
+    },
+    {
+      "index": 188,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 189,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 190,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 191,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 192,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 193,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 194,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 195,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 196,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 197,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 198,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 199,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 200,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 201,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 202,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 203,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 204,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 205,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "</tool_call>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 206,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 207,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 208,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 209,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 210,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 211,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 212,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 213,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 214,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 215,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 216,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "not helpful or inaccurate",
+      "correct": false
+    },
+    {
+      "index": 217,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 218,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 219,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 220,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 221,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 222,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 223,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 224,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 225,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 226,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 227,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 228,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 229,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 230,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 231,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 232,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 233,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "not helpful or inaccurate",
+      "correct": false
+    },
+    {
+      "index": 234,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 235,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "not helpful or inaccurate",
+      "correct": false
+    },
+    {
+      "index": 236,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "not helpful or inaccurate",
+      "correct": false
+    },
+    {
+      "index": 237,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "not helpful or inaccurate",
+      "correct": false
+    },
+    {
+      "index": 238,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 239,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 240,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 241,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 242,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "not helpful or inaccurate",
+      "correct": true
+    },
+    {
+      "index": 243,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nhelpful and accurate",
+      "expected": "not helpful or inaccurate",
+      "correct": false
+    },
+    {
+      "index": 244,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    },
+    {
+      "index": 245,
+      "prompt_summary": "You are a fact-checking assistant. Analyze the following community note summary and classify whether it is helpful and accurate or not helpful and ina",
+      "generated": "<think>\n\n</think>\n\nnot helpful or inaccurate",
+      "expected": "helpful and accurate",
+      "correct": true
+    }
+  ]
+}

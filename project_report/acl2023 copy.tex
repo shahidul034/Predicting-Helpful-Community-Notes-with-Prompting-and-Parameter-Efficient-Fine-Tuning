@@ -1,0 +1,254 @@
+% This must be in the first 5 lines to tell arXiv to use pdfLaTeX, which is strongly recommended.
+\pdfoutput=1
+
+\documentclass[11pt]{article}
+\usepackage{ACL2023}
+
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{microtype}
+\usepackage{inconsolata}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows.meta, positioning}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins, breakable}
+
+% Custom style for the example box
+\newtcolorbox{examplebox}[1]{
+	colback=gray!5,
+	colframe=gray!80,
+	fonttitle=\bfseries,
+	title=#1,
+	sharp corners,
+	boxrule=0.5pt,
+	enhanced,
+	breakable
+}
+
+\setlength\titlebox{6cm}
+
+\title{Predicting Helpful Community Notes with Prompting and Parameter-Efficient Fine-Tuning}
+
+\author{
+	Mridul Madan (01667156), Rafael Pashkov (02183763), Md Shahidul Salim (02207019) \\
+	University of Massachusetts Lowell
+}
+
+\begin{document}
+	\maketitle
+	
+	\begin{abstract}
+		Twitter/X Community Notes represents a significant shift toward decentralized, crowdsourced fact-checking, where visibility is reserved for notes judged ``helpful'' by a diverse pool of raters. In this study, we investigate the feasibility of predicting note helpfulness directly from text, comparing a range of modern language modeling strategies. We evaluate the performance of \textbf{Gemma-3-4B-IT} and \textbf{Qwen3-4B-Instruct} across zero-shot, few-shot, and chain-of-thought (CoT) prompting, and benchmark these against a supervised \textbf{BERT} baseline and parameter-efficient fine-tuning (\textbf{PEFT}) via \textbf{LoRA}. 
+		Our experiments reveal a stark performance hierarchy: while zero-shot prompting fails to outperform the majority class, CoT reasoning improves F1 scores to \textbf{62.50} (Gemma) and \textbf{61.49} (Qwen). However, these prompting strategies are substantially outperformed by PEFT; LoRA-tuned Qwen and Gemma models achieve F1 scores of \textbf{85.90} and \textbf{96.03}, respectively, on a shared 246-example test split. These results demonstrate that while instruction-tuned models possess strong general reasoning, targeted fine-tuning is essential for capturing the nuanced stylistic and evidentiary patterns that drive community trust. All code and fine-tuned models are publicly available at \href{https://github.com/shahidul034/Predicting-Helpful-Community-Notes-with-Prompting-and-Parameter-Efficient-Fine-Tuning}{GitHub} and Hugging Face (\href{https://huggingface.co/shahidul034/gemma-3-4b-it-CommunityNotesEffectiveness}{Gemma} \& \href{https://huggingface.co/shahidul034/qwen3-4b-instruct-2507-CommunityNotesEffectiveness}{Qwen}).
+	\end{abstract}
+	
+	\section{Introduction}
+	Online misinformation spreads faster than traditional expert fact-checking can respond. Twitter/X Community Notes offers an alternative moderation mechanism in which users collaboratively write contextual notes for disputed posts, and notes are shown only after receiving helpful ratings from raters with diverse viewpoints \citep{allen2022,saeed2022}. This makes Community Notes an attractive setting for studying how crowd-based fact-checking succeeds in practice.
+	
+	Most prior work on Community Notes focuses on the rating process itself, the role of bridging across viewpoints, or the downstream impact of the program on misinformation engagement \citep{allen2022,chuai2024}. In contrast, our project asks a content-centered question: can we predict whether a note will be judged helpful from the note text? A strong predictor could support contributor training, draft-time feedback, and improved moderation workflows.
+	
+	To answer this question, we compare three modeling families. First, we evaluate prompting-only approaches with two 4B instruction-tuned models. Second, we include a supervised BERT baseline \citep{devlin2019bert}. Third, we evaluate parameter-efficient LoRA fine-tuning \citep{hu2022lora} implemented with Unsloth \citep{unsloth2024}. Our report is based on the final saved evaluation artifacts from the project, so it serves as a concise empirical summary of what worked best in the completed system.
+	
+	\section{Related Work}
+	Community Notes, formerly Birdwatch, has become a prominent example of platform-supported crowdsourced fact-checking. \citet{allen2022} show that the system is designed to reward notes that bridge ideological divides rather than merely reinforce partisan communities. \citet{saeed2022} compare crowd judgments with expert fact-checking and show that crowd-based moderation can provide useful signal at scale. More recently, \citet{chuai2024} study whether the rollout of Community Notes reduced engagement with misinformation on X/Twitter.
+	
+	Our project is complementary to this literature. Rather than analyzing the platform's voting or visibility mechanism, we study whether note text alone contains enough signal to predict eventual helpfulness. Methodologically, we contrast prompting with supervised learning and parameter-efficient fine-tuning, which has become a practical way to adapt open-weight language models for specialized tasks \citep{hu2022lora}.
+	
+	\section{Task and Data}
+	We use the public Community Notes data released by Twitter/X.\footnote{\begin{minipage}{\columnwidth}\small\url{https://communitynotes.twitter.com/guide/en/under-the-hood/download-data}\end{minipage}} Following the original project plan, we treat the task as binary classification: predict whether a note is \textsc{currently\_rated\_helpful} or not, while excluding notes labeled \textsc{needs\_more\_ratings}. The final dataset comprises 1,000 notes covering January--December 2024, split temporally into 754 training samples (January--September 2024) and 246 test samples (October--December 2024). All experiments---prompting, BERT fine-tuning, and LoRA fine-tuning---use the same train/test split for consistent comparison.
+	
+	\noindent\textbf{Class Distribution.} The dataset is nearly balanced: the training set contains 49.7\% Helpful (375) and 50.3\% Not Helpful (379) notes, while the test set contains 54.5\% Helpful (134) and 45.5\% Not Helpful (112) notes. The 4.7-percentage-point difference is negligible, ensuring that our F1-score comparisons are not distorted by class imbalance.
+	
+	\noindent\textbf{Linguistic Profile.} Community Notes are compact, averaging 31.4 words (SD = 10.2, median = 33). Helpful notes tend to be slightly longer (mean = 32.7 words) than Not Helpful notes (mean = 30.0 words), reflecting the additional detail and structure that effective fact-checking typically requires. The most frequent unigrams are shared across both classes (``claim,'' ``data,'' ``about,'') but their combinatorial patterns differ systematically. Helpful notes are characterized by authoritative, evidence-citing bigrams such as `not consistent with' and `publicly available data,' whereas Not Helpful notes feature hedging phrases such as `hard to say' and `for certain.' Readability, measured by the Flesch--Kincaid grade level, is similar across classes (Helpful: 11.2; Not Helpful: 11.1), indicating that complexity alone does not distinguish effective notes.
+	
+	\noindent\textbf{Train-Test Consistency.} The temporal split guarantees zero overlap: no note ID appears in both splits. Statistical properties are consistent across splits: word count (Train mean = 31.4, Test mean = 31.7), readability (Train = 11.2, Test = 11.0), and average ratings per note (Train = 50.1, Test = 50.2).
+	
+	\begin{table}[t]
+		\centering
+		\small
+		\setlength{\tabcolsep}{4pt}
+		\begin{tabular}{lcc}
+			\toprule
+			\textbf{Statistic} & \textbf{Train (754)} & \textbf{Test (246)} \\
+			\midrule
+			Helpful (\%) & 49.7\% & 54.5\% \\
+			Misinformed intent (\%) & 53.8\% & 47.2\% \\
+			Mean word count & 31.4 & 31.7 \\
+			Median word count & 33 & 33 \\
+			Mean ratings per note & 50.1 & 50.2 \\
+			FK grade level & 11.2 & 11.0 \\
+			Date range & Jan--Sep 2024 & Oct--Dec 2024 \\
+			\bottomrule
+		\end{tabular}
+		\caption{Dataset statistics and train-test split consistency. The splits are statistically similar across all measured dimensions, confirming a fair comparison setting.}
+		\label{tab:dataset-stats}
+	\end{table}
+	
+	\begin{figure}[ht]
+		\begin{examplebox}{Task Illustration: Helpful vs.\ Not Helpful Community Notes}
+			\small
+			\textbf{Original Post (Context):} ``Education reforms have increased school performance by 30\% since implementation began last year.''
+			
+			\vspace{0.5em}
+			\hrule
+			\vspace{0.5em}
+			
+			\begin{minipage}[t]{0.48\textwidth}
+				\textbf{Note A (Input Text):} \\
+				``The claim about education reforms is misleading. Harvard researchers published. Specifically, education reforms decreased by 0.4\% in Q3 2024. as reported by, the original tweet's figures are not consistent with publicly available data from authoritative sources.'' \\
+				\textbf{Prediction/Target:} \textcolor{green!60!black}{\textsc{Helpful}}
+			\end{minipage}
+			\hfill
+			\vrule
+			\hfill
+			\begin{minipage}[t]{0.48\textwidth}
+				\textbf{Note B (Input Text):} \\
+				``The question of education reforms is complex. There are arguments on both sides of this issue. Some experts believe one way, while others disagree. More research is needed to reach a definitive conclusion.'' \\
+				\vspace{2.5em} \\
+				\textbf{Prediction/Target:} \textcolor{red!60!black}{\textsc{Not\_Helpful}}
+			\end{minipage}
+		\end{examplebox}
+		\caption{Real examples from the Community Notes training set. Note A received 99 ratings and was classified as helpful; it cites specific data and authoritative sources. Note B received 100 ratings but was classified as not helpful; it is vague, non-committal, and provides no evidence.}
+		\label{fig:task_example}
+	\end{figure}
+	
+	\section{Methods}
+	\subsection{Prompting Baselines}
+	We evaluate two instruction-tuned 4B models, Gemma-3-4B-IT and Qwen3-4B-Instruct, under three prompting strategies:
+	\begin{itemize}
+		\item \textbf{Zero-shot:} direct classification from the prompt alone.
+		\item \textbf{Few-shot:} in-context prompting with labeled examples.
+		\item \textbf{Chain-of-thought (CoT):} prompting the model to reason before producing the final class label.
+	\end{itemize}
+	
+	These baselines test whether strong instruction-following models can infer note helpfulness without task-specific parameter updates.
+	
+	\subsection{Supervised Baseline}
+	As a stronger text classifier baseline, we fine-tune \texttt{bert-base-uncased} \citep{devlin2019bert}. According to the saved training report, the model was trained for 3 epochs with batch size 32, learning rate $2\times10^{-5}$, maximum sequence length 512, and weight decay 0.01. The best checkpoint was selected by validation F1.
+	
+	\subsection{LoRA Fine-Tuning}
+	Our primary approach applies parameter-efficient fine-tuning to Gemma-3-4B-IT and Qwen3-4B-Instruct using LoRA \citep{hu2022lora} and the Unsloth training framework \citep{unsloth2024}. This setup aims to preserve the strong prior knowledge of instruction-tuned models while adapting them to the language patterns of helpful and unhelpful notes.
+	
+	\begin{figure}[ht]
+		\centering
+		\begin{tikzpicture}[
+			node distance=0.8cm and 0.1cm,
+			box/.style={rectangle, rounded corners, draw=black, thick, text width=2.4cm, minimum height=0.8cm, align=center, fill=gray!10, font=\scriptsize},
+			highlight/.style={rectangle, rounded corners, draw=black, thick, text width=3.2cm, minimum height=0.8cm, align=center, fill=blue!10, font=\scriptsize},
+			arrow/.style={thick, ->, >=stealth}
+			]
+			
+			% Top Sections
+			\node[box, text width=3.8cm] (data) {\textbf{Twitter/X Community Notes}\\(Text \& Status Metadata)};
+			\node[box, below=0.6cm of data, text width=3.5cm] (split) {\textbf{Data Split}\\Train: 754 | Test: 246};
+			
+			% Three-way Method Split (Narrowed)
+			\node[box, below=0.8cm of split] (bert) {\textbf{BERT Baseline}\\(Full Fine-Tuning)};
+			\node[box, left=0.1cm of bert] (prompting) {\textbf{Prompting}\\(No Updates)};
+			\node[box, right=0.1cm of bert] (lora) {\textbf{PEFT (LoRA)}\\(Unsloth)};
+			
+			% Model Details
+			\node[box, below=0.5cm of prompting] (strategies) {Zero-shot / Few-shot / CoT};
+			\node[box, below=0.5cm of bert] (bert_model) {BERT-base-uncased};
+			\node[box, below=0.5cm of lora] (lora_models) {Gemma-3-4B-IT\\Qwen3-4B-Instruct};
+			
+			% Evaluation and Conclusion
+			\node[box, text width=4cm, below=2.2cm of bert_model] (eval) {\textbf{Evaluation on Test Split}\\(Acc, Prec, Rec, F1)};
+			\node[highlight, below=0.6cm of eval] (best) {\textbf{Best Performer}\\LoRA Gemma-3-4B-IT\\(96.03 F1)};
+			
+			% Vertical/Diagonal Arrows
+			\draw[arrow] (data) -- (split);
+			\draw[arrow] (split) -- (prompting);
+			\draw[arrow] (split) -- (bert);
+			\draw[arrow] (split) -- (lora);
+			
+			\draw[arrow] (prompting) -- (strategies);
+			\draw[arrow] (bert) -- (bert_model);
+			\draw[arrow] (lora) -- (lora_models);
+			
+			\draw[arrow] (strategies) |- ([yshift=0.3cm]eval.north);
+			\draw[arrow] (bert_model) -- (eval);
+			\draw[arrow] (lora_models) |- ([yshift=0.3cm]eval.north);
+			\draw[arrow] (eval) -- (best);
+			
+		\end{tikzpicture}
+		\caption{Methodology overview for single-column layout.}
+		\label{fig:methodology_flowchart}
+	\end{figure}
+	
+	\section{Experimental Setup}
+	Across experiments, we report accuracy, precision, recall, and F1 score. These metrics are appropriate because false positives and false negatives both matter for note-quality prediction, and F1 provides a balanced summary when the classes may be unevenly distributed.
+	
+	All experiments were evaluated on the same 246-example test split with 754 training samples. The prompting experiments were evaluated from saved JSON outputs, while the BERT and LoRA experiments were evaluated from saved training reports. This shared split supports direct comparison across all approaches.
+	
+	Code and project artifacts are available in our public \href{https://github.com/shahidul034/Predicting-Helpful-Community-Notes-with-Prompting-and-Parameter-Efficient-Fine-Tuning}{GitHub repository}. The released LoRA adapters are also available on Hugging Face for \href{https://huggingface.co/shahidul034/qwen3-4b-instruct-2507-CommunityNotesEffectiveness}{Qwen3-4B-Instruct} and \href{https://huggingface.co/shahidul034/gemma-3-4b-it-CommunityNotesEffectiveness}{Gemma-3-4B-IT}.
+	
+	\section{Results}
+	\subsection{Prompting Results}
+	Table~\ref{tab:prompting-results} summarizes the prompting experiments. Zero-shot prompting failed for both models, with every example predicted as \textsc{not\_helpful}. Few-shot prompting recovered substantially, and CoT prompting yielded the best overall prompting performance for both models.
+	
+	\begin{table*}[t]
+		\centering
+		\small
+		\begin{tabular}{llcccc}
+			\toprule
+			\textbf{Strategy} & \textbf{Model} & \textbf{Accuracy} & \textbf{Precision} & \textbf{Recall} & \textbf{F1} \\
+			\midrule
+			Zero-shot & Gemma-3-4B-IT & 45.53 & 0.00 & 0.00 & 0.00 \\
+			Zero-shot & Qwen3-4B-Instruct & 45.53 & 0.00 & 0.00 & 0.00 \\
+			Few-shot & Gemma-3-4B-IT & 52.44 & 56.69 & 53.73 & 55.17 \\
+			Few-shot & Qwen3-4B-Instruct & 49.19 & 53.19 & 55.97 & 54.55 \\
+			CoT & Gemma-3-4B-IT & 56.10 & 58.40 & 67.20 & 62.50 \\
+			CoT & Qwen3-4B-Instruct & 53.66 & 56.17 & 67.91 & 61.49 \\
+			\bottomrule
+		\end{tabular}
+		\caption{Prompting performance on the 246-example test split.}
+		\label{tab:prompting-results}
+	\end{table*}
+	
+	Two patterns stand out. First, naive prompting is insufficient for the task: both models collapsed to the majority class in the zero-shot setting. Second, prompting quality matters more than model identity. Moving from zero-shot to CoT improved F1 by more than 61 points for both models. Gemma held a small edge over Qwen in accuracy, precision, and F1, while Qwen achieved slightly higher recall in the few-shot and CoT settings.
+	
+	\subsection{Supervised and Fine-Tuned Results}
+	Table~\ref{tab:supervised-results} compares the supervised models on the shared 246-example test split. BERT provides a solid baseline, but both LoRA-tuned large language models substantially outperform it. Gemma-3-4B-IT is the best overall system, reaching 95.53 accuracy and 96.03 F1.
+	
+	\begin{table*}[t]
+		\centering
+		\small
+		\begin{tabular}{llccccc}
+			\toprule
+			\textbf{Model} & \textbf{Method} & \textbf{Test} & \textbf{Accuracy} & \textbf{Precision} & \textbf{Recall} & \textbf{F1} \\
+			\midrule
+			BERT-base-uncased & Supervised baseline & 246 & 59.76 & 62.96 & 63.43 & 63.20 \\
+			Qwen3-4B-Instruct & LoRA fine-tuning & 246 & 82.11 & 75.28 & 100.00 & 85.90 \\
+			Gemma-3-4B-IT & LoRA fine-tuning & 246 & 95.53 & 93.01 & 99.25 & 96.03 \\
+			\bottomrule
+		\end{tabular}
+		\caption{Supervised and fine-tuned model performance on the shared 246-example test split.}
+		\label{tab:supervised-results}
+	\end{table*}
+	
+	The BERT baseline achieved 63.20 F1 with evaluation loss 0.6581. The LoRA runs reached much stronger scores while maintaining low training loss (0.3871 for Qwen and 0.3894 for Gemma in the saved reports). Qwen produced perfect recall on the test split, but at the cost of lower precision. Gemma improved both precision and recall, indicating a better overall decision boundary rather than a simple shift toward the positive class.
+	
+	\section{Discussion}
+	The project results show a clear hierarchy among methods. Prompting alone can recover useful signal once examples or reasoning scaffolds are added, but the performance ceiling remains modest on the available benchmark. Supervised learning with BERT improves stability, suggesting that note helpfulness is learnable from text. The strongest gains come from parameter-efficient adaptation of larger instruction-tuned models, which likely benefits from combining broad language understanding with targeted domain adaptation.
+	
+	From an application perspective, these findings suggest that a lightweight classifier built on LoRA-tuned open models could provide practical support for note drafting or moderation triage. At the same time, the gap between zero-shot prompting and fine-tuning indicates that note helpfulness is not a trivial surface-level judgment. Models appear to benefit from direct exposure to task-specific examples rather than relying only on generic instruction-following ability.
+	
+	\section{Conclusion}
+	This report summarized the final outcomes of our Community Notes helpfulness prediction project. Across all completed experiments, chain-of-thought prompting was the best prompting strategy, but parameter-efficient fine-tuning delivered the largest improvements overall. On the shared supervised benchmark, LoRA-tuned Gemma-3-4B-IT achieved the best performance at 96.03 F1, substantially outperforming both the BERT baseline and the prompting-only approaches. These results support the use of fine-tuned open language models for modeling the effectiveness of crowd-sourced fact-checking text.
+	
+	\section*{Limitations}
+	This study has several limitations. First, the benchmark is relatively small (754 training, 246 test), so the reported gains may overestimate generalization compared with a larger temporal evaluation. Second, our report focuses on aggregate performance metrics and does not include a full qualitative error analysis or a controlled linguistic analysis of which textual features drive helpfulness predictions. Third, the task is limited to English Community Notes and may not transfer to other languages or other fact-checking platforms. Finally, high-performing classifiers should not be interpreted as replacements for the human and cross-perspective judgment mechanisms that make Community Notes valuable in the first place.
+	
+	\section*{Ethics Statement}
+	Predicting note helpfulness is a socially consequential task because it touches platform governance, misinformation response, and public trust. A model like ours could be beneficial if used to support contributors during drafting, prioritize notes for review, or help researchers study effective fact-checking language. However, misuse is also possible. Automated predictions could be over-trusted, could encode dataset biases present in historical Community Notes decisions, or could privilege stylistic patterns that correlate with past success without necessarily improving truthfulness or fairness. For these reasons, we view the model as a decision-support tool rather than an autonomous moderation system. Human review, transparency about uncertainty, and ongoing bias analysis remain necessary for responsible deployment.
+	
+	\bibliographystyle{acl_natbib}
+	\bibliography{custom}
+	
+\end{document}

@@ -1,0 +1,29 @@
+{
+  "val": {
+    "total_notes": 92,
+    "helpful_count": 56,
+    "not_helpful_count": 36,
+    "helpful_ratio": 0.6086956521739131,
+    "avg_note_length": 77.19565217391305,
+    "min_note_length": 40,
+    "max_note_length": 104
+  },
+  "test": {
+    "total_notes": 165,
+    "helpful_count": 94,
+    "not_helpful_count": 71,
+    "helpful_ratio": 0.5696969696969697,
+    "avg_note_length": 76.07878787878788,
+    "min_note_length": 40,
+    "max_note_length": 104
+  },
+  "train": {
+    "total_notes": 743,
+    "helpful_count": 458,
+    "not_helpful_count": 285,
+    "helpful_ratio": 0.6164199192462988,
+    "avg_note_length": 77.71601615074024,
+    "min_note_length": 40,
+    "max_note_length": 104
+  }
+}

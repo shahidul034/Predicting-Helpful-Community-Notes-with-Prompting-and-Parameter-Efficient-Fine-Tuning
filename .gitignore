@@ -24,7 +24,7 @@ checkpoint-*/
 **/checkpoint-*/
 
 # Output artifacts
-outputs/
+
 
 # Python
 __pycache__/

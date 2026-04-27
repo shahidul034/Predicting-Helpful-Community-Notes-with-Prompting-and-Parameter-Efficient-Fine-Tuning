@@ -1,0 +1,31 @@
+{
+  "model": "google/gemma-3-4b-it",
+  "model_tag": "gemma-3-4b",
+  "method": "LoRA_finetuning_unsloth",
+  "chat_template": "chatml",
+  "hyperparameters": {
+    "max_length": 512,
+    "batch_size": 4,
+    "gradient_accumulation_steps": 4,
+    "epochs": 3,
+    "learning_rate": 0.0002,
+    "lora_r": 16,
+    "lora_alpha": 32
+  },
+  "dataset": {
+    "train_samples": 754,
+    "test_samples": 246
+  },
+  "training": {
+    "train_runtime": 224,
+    "train_loss": 0.0925
+  },
+  "test_results": {
+    "accuracy": 0.5935,
+    "precision": 0.5825,
+    "recall": 0.8955,
+    "f1": 0.7059
+  },
+  "model_save_path": "/home/mshahidul/llm_safety/sc_project/outputs/models/gemma-3-4b_unsloth_lora",
+  "timestamp": "2026-04-26T03:30:39.188431"
+}

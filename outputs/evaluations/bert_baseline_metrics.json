@@ -1,0 +1,29 @@
+{
+  "model": "bert-base-uncased",
+  "task": "community_notes_effectiveness_prediction",
+  "hyperparameters": {
+    "epochs": 3,
+    "batch_size": 32,
+    "learning_rate": 2e-05,
+    "max_length": 512,
+    "weight_decay": 0.01
+  },
+  "dataset": {
+    "train_samples": 754,
+    "test_samples": 246
+  },
+  "test_results": {
+    "eval_loss": 0.6581,
+    "eval_accuracy": 0.5976,
+    "eval_precision": 0.6296,
+    "eval_recall": 0.6343,
+    "eval_f1": 0.632
+  },
+  "training": {
+    "train_loss": 0.6608,
+    "train_runtime_sec": 30.91
+  },
+  "gpu": "CUDA:3",
+  "best_model_by": "f1 (epoch 2: 0.6296)",
+  "model_path": "outputs/models/bert_baseline"
+}

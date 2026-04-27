@@ -1,0 +1,42 @@
+{
+  "model": "Qwen/Qwen3-4B-Instruct-2507",
+  "model_tag": "qwen3-4b-instruct-2507",
+  "method": "LoRA_finetuning_unsloth",
+  "chat_template": "qwen3-instruct",
+  "hyperparameters": {
+    "max_length": 512,
+    "batch_size": 4,
+    "gradient_accumulation_steps": 4,
+    "epochs": 3,
+    "learning_rate": 0.0002,
+    "lora_r": 16,
+    "lora_alpha": 32,
+    "lora_dropout": 0.0,
+    "warmup_steps": 10,
+    "weight_decay": 0.01
+  },
+  "dataset": {
+    "train_samples": 754,
+    "test_samples": 246
+  },
+  "training": {
+    "train_runtime": 253.44,
+    "train_loss": 0.1985,
+    "train_samples_per_second": 8.925,
+    "train_steps_per_second": 0.568,
+    "peak_reserved_memory_gb": 4.062
+  },
+  "gpu": {
+    "name": "NVIDIA H200 NVL",
+    "max_memory_gb": 139.802,
+    "gpu_id": 3
+  },
+  "test_results": {
+    "accuracy": 0.5976,
+    "precision": 0.6224,
+    "recall": 0.6642,
+    "f1": 0.6426
+  },
+  "model_save_path": "/home/mshahidul/llm_safety/sc_project/outputs/models/qwen3-4b-instruct-2507_unsloth_lora",
+  "timestamp": "2026-04-26T15:19:23.431936"
+}

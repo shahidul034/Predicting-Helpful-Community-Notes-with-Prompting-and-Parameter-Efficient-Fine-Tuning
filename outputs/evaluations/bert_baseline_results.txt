@@ -1,0 +1,81 @@
+Skipping import of cpp extensions due to incompatible torch version. Please upgrade to torch >= 2.11.0 (found 2.10.0+cu130).
+2026-04-26 02:32:08 - community_notes - INFO - Starting BERT baseline training...
+2026-04-26 02:32:08 - community_notes - INFO - Train set: 754 samples
+2026-04-26 02:32:08 - community_notes - INFO - Test set: 246 samples
+2026-04-26 02:32:08 - community_notes - INFO - Loading model: bert-base-uncased
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 7821.38it/s]
+[1mBertForSequenceClassification LOAD REPORT[0m from: bert-base-uncased
+Key                                        | Status     | 
+-------------------------------------------+------------+-
+cls.predictions.transform.dense.bias       | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED | 
+cls.seq_relationship.weight                | UNEXPECTED | 
+cls.predictions.bias                       | UNEXPECTED | 
+cls.seq_relationship.bias                  | UNEXPECTED | 
+cls.predictions.transform.dense.weight     | UNEXPECTED | 
+classifier.weight                          | MISSING    | 
+classifier.bias                            | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+Map:   0%|          | 0/754 [00:00<?, ? examples/s]Map: 100%|██████████| 754/754 [00:00<00:00, 6481.75 examples/s]Map: 100%|██████████| 754/754 [00:00<00:00, 6361.14 examples/s]
+Map:   0%|          | 0/246 [00:00<?, ? examples/s]Map: 100%|██████████| 246/246 [00:00<00:00, 5764.53 examples/s]
+`logging_dir` is deprecated and will be removed in v5.2. Please set `TENSORBOARD_LOGGING_DIR` instead.
+2026-04-26 02:32:11 - community_notes - INFO - Starting training...
+  0%|          | 0/72 [00:00<?, ?it/s]  1%|▏         | 1/72 [00:00<00:45,  1.58it/s]  3%|▎         | 2/72 [00:01<00:40,  1.72it/s]  4%|▍         | 3/72 [00:01<00:30,  2.27it/s]  6%|▌         | 4/72 [00:01<00:25,  2.67it/s]  7%|▋         | 5/72 [00:01<00:22,  2.96it/s]  8%|▊         | 6/72 [00:02<00:20,  3.15it/s] 10%|▉         | 7/72 [00:02<00:19,  3.29it/s] 11%|█         | 8/72 [00:02<00:18,  3.39it/s] 12%|█▎        | 9/72 [00:03<00:18,  3.46it/s] 14%|█▍        | 10/72 [00:03<00:17,  3.51it/s] 15%|█▌        | 11/72 [00:03<00:17,  3.55it/s] 17%|█▋        | 12/72 [00:03<00:16,  3.58it/s] 18%|█▊        | 13/72 [00:04<00:16,  3.61it/s] 19%|█▉        | 14/72 [00:04<00:16,  3.62it/s] 21%|██        | 15/72 [00:04<00:15,  3.62it/s] 22%|██▏       | 16/72 [00:05<00:15,  3.63it/s] 24%|██▎       | 17/72 [00:05<00:15,  3.64it/s] 25%|██▌       | 18/72 [00:05<00:14,  3.65it/s] 26%|██▋       | 19/72 [00:05<00:14,  3.65it/s] 28%|██▊       | 20/72 [00:06<00:14,  3.64it/s] 29%|██▉       | 21/72 [00:06<00:14,  3.64it/s] 31%|███       | 22/72 [00:06<00:13,  3.65it/s] 32%|███▏      | 23/72 [00:06<00:13,  3.68it/s] 33%|███▎      | 24/72 [00:07<00:11,  4.21it/s]
+  0%|          | 0/8 [00:00<?, ?it/s][A
+ 38%|███▊      | 3/8 [00:00<00:00, 15.67it/s][A
+ 62%|██████▎   | 5/8 [00:00<00:00, 12.62it/s][A
+ 88%|████████▊ | 7/8 [00:00<00:00, 11.79it/s][A                                               
+                                             [A 33%|███▎      | 24/72 [00:07<00:11,  4.21it/s]
+100%|██████████| 8/8 [00:00<00:00, 11.79it/s][A
+                                             [A{'eval_loss': '0.6682', 'eval_accuracy': '0.5976', 'eval_precision': '0.6923', 'eval_recall': '0.4701', 'eval_f1': '0.56', 'eval_runtime': '0.7402', 'eval_samples_per_second': '332.3', 'eval_steps_per_second': '10.81', 'epoch': '1'}
+
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s][A
+Writing model shards: 100%|██████████| 1/1 [00:01<00:00,  1.06s/it][AWriting model shards: 100%|██████████| 1/1 [00:01<00:00,  1.06s/it]
+ 35%|███▍      | 25/72 [00:11<01:03,  1.36s/it] 36%|███▌      | 26/72 [00:11<00:47,  1.03s/it] 38%|███▊      | 27/72 [00:11<00:36,  1.24it/s] 39%|███▉      | 28/72 [00:11<00:28,  1.55it/s] 40%|████      | 29/72 [00:12<00:22,  1.87it/s] 42%|████▏     | 30/72 [00:12<00:19,  2.20it/s] 43%|████▎     | 31/72 [00:12<00:16,  2.50it/s] 44%|████▍     | 32/72 [00:12<00:14,  2.75it/s] 46%|████▌     | 33/72 [00:13<00:13,  2.97it/s] 47%|████▋     | 34/72 [00:13<00:12,  3.15it/s] 49%|████▊     | 35/72 [00:13<00:11,  3.27it/s] 50%|█████     | 36/72 [00:14<00:10,  3.34it/s] 51%|█████▏    | 37/72 [00:14<00:10,  3.42it/s] 53%|█████▎    | 38/72 [00:14<00:09,  3.47it/s] 54%|█████▍    | 39/72 [00:14<00:09,  3.50it/s] 56%|█████▌    | 40/72 [00:15<00:09,  3.52it/s] 57%|█████▋    | 41/72 [00:15<00:08,  3.53it/s] 58%|█████▊    | 42/72 [00:15<00:08,  3.53it/s] 60%|█████▉    | 43/72 [00:16<00:08,  3.54it/s] 61%|██████    | 44/72 [00:16<00:07,  3.57it/s] 62%|██████▎   | 45/72 [00:16<00:07,  3.58it/s] 64%|██████▍   | 46/72 [00:16<00:07,  3.58it/s] 65%|██████▌   | 47/72 [00:17<00:06,  3.62it/s] 67%|██████▋   | 48/72 [00:17<00:05,  4.13it/s]
+  0%|          | 0/8 [00:00<?, ?it/s][A
+ 38%|███▊      | 3/8 [00:00<00:00, 15.07it/s][A
+ 62%|██████▎   | 5/8 [00:00<00:00, 11.77it/s][A
+ 88%|████████▊ | 7/8 [00:00<00:00, 10.95it/s][A                                               
+                                             [A 67%|██████▋   | 48/72 [00:18<00:05,  4.13it/s]
+100%|██████████| 8/8 [00:00<00:00, 10.95it/s][A
+                                             [A{'eval_loss': '0.6581', 'eval_accuracy': '0.5935', 'eval_precision': '0.625', 'eval_recall': '0.6343', 'eval_f1': '0.6296', 'eval_runtime': '0.8059', 'eval_samples_per_second': '305.3', 'eval_steps_per_second': '9.927', 'epoch': '2'}
+
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s][A
+Writing model shards: 100%|██████████| 1/1 [00:01<00:00,  1.21s/it][AWriting model shards: 100%|██████████| 1/1 [00:01<00:00,  1.21s/it]
+ 68%|██████▊   | 49/72 [00:21<00:31,  1.39s/it] 69%|██████▉   | 50/72 [00:21<00:23,  1.06s/it]                                                69%|██████▉   | 50/72 [00:21<00:23,  1.06s/it] 71%|███████   | 51/72 [00:21<00:17,  1.21it/s] 72%|███████▏  | 52/72 [00:22<00:13,  1.50it/s] 74%|███████▎  | 53/72 [00:22<00:10,  1.81it/s] 75%|███████▌  | 54/72 [00:22<00:08,  2.11it/s] 76%|███████▋  | 55/72 [00:23<00:07,  2.40it/s] 78%|███████▊  | 56/72 [00:23<00:06,  2.65it/s] 79%|███████▉  | 57/72 [00:23<00:05,  2.87it/s] 81%|████████  | 58/72 [00:23<00:04,  3.02it/s] 82%|████████▏ | 59/72 [00:24<00:04,  3.18it/s] 83%|████████▎ | 60/72 [00:24<00:03,  3.28it/s] 85%|████████▍ | 61/72 [00:24<00:03,  3.36it/s] 86%|████████▌ | 62/72 [00:25<00:02,  3.41it/s] 88%|████████▊ | 63/72 [00:25<00:02,  3.46it/s] 89%|████████▉ | 64/72 [00:25<00:02,  3.49it/s] 90%|█████████ | 65/72 [00:25<00:01,  3.52it/s] 92%|█████████▏| 66/72 [00:26<00:01,  3.54it/s] 93%|█████████▎| 67/72 [00:26<00:01,  3.55it/s] 94%|█████████▍| 68/72 [00:26<00:01,  3.55it/s] 96%|█████████▌| 69/72 [00:27<00:00,  3.53it/s] 97%|█████████▋| 70/72 [00:27<00:00,  3.51it/s] 99%|█████████▊| 71/72 [00:27<00:00,  3.52it/s]100%|██████████| 72/72 [00:27<00:00,  4.03it/s]{'loss': '0.6696', 'grad_norm': '2.165', 'learning_rate': '6.389e-06', 'epoch': '2.083'}
+
+  0%|          | 0/8 [00:00<?, ?it/s][A
+ 25%|██▌       | 2/8 [00:00<00:00, 19.83it/s][A
+ 50%|█████     | 4/8 [00:00<00:00, 12.37it/s][A
+ 75%|███████▌  | 6/8 [00:00<00:00, 11.16it/s][A
+100%|██████████| 8/8 [00:00<00:00, 11.92it/s][A                                               
+                                             [A100%|██████████| 72/72 [00:28<00:00,  4.03it/s]
+100%|██████████| 8/8 [00:00<00:00, 11.92it/s][A
+                                             [A{'eval_loss': '0.6582', 'eval_accuracy': '0.5935', 'eval_precision': '0.67', 'eval_recall': '0.5', 'eval_f1': '0.5726', 'eval_runtime': '0.7992', 'eval_samples_per_second': '307.8', 'eval_steps_per_second': '10.01', 'epoch': '3'}
+
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s][A
+Writing model shards: 100%|██████████| 1/1 [00:00<00:00,  1.29it/s][AWriting model shards: 100%|██████████| 1/1 [00:00<00:00,  1.29it/s]
+                                               100%|██████████| 72/72 [00:30<00:00,  4.03it/s]There were missing keys in the checkpoint model loaded: ['bert.embeddings.LayerNorm.weight', 'bert.embeddings.LayerNorm.bias', 'bert.encoder.layer.0.attention.output.LayerNorm.weight', 'bert.encoder.layer.0.attention.output.LayerNorm.bias', 'bert.encoder.layer.0.output.LayerNorm.weight', 'bert.encoder.layer.0.output.LayerNorm.bias', 'bert.encoder.layer.1.attention.output.LayerNorm.weight', 'bert.encoder.layer.1.attention.output.LayerNorm.bias', 'bert.encoder.layer.1.output.LayerNorm.weight', 'bert.encoder.layer.1.output.LayerNorm.bias', 'bert.encoder.layer.2.attention.output.LayerNorm.weight', 'bert.encoder.layer.2.attention.output.LayerNorm.bias', 'bert.encoder.layer.2.output.LayerNorm.weight', 'bert.encoder.layer.2.output.LayerNorm.bias', 'bert.encoder.layer.3.attention.output.LayerNorm.weight', 'bert.encoder.layer.3.attention.output.LayerNorm.bias', 'bert.encoder.layer.3.output.LayerNorm.weight', 'bert.encoder.layer.3.output.LayerNorm.bias', 'bert.encoder.layer.4.attention.output.LayerNorm.weight', 'bert.encoder.layer.4.attention.output.LayerNorm.bias', 'bert.encoder.layer.4.output.LayerNorm.weight', 'bert.encoder.layer.4.output.LayerNorm.bias', 'bert.encoder.layer.5.attention.output.LayerNorm.weight', 'bert.encoder.layer.5.attention.output.LayerNorm.bias', 'bert.encoder.layer.5.output.LayerNorm.weight', 'bert.encoder.layer.5.output.LayerNorm.bias', 'bert.encoder.layer.6.attention.output.LayerNorm.weight', 'bert.encoder.layer.6.attention.output.LayerNorm.bias', 'bert.encoder.layer.6.output.LayerNorm.weight', 'bert.encoder.layer.6.output.LayerNorm.bias', 'bert.encoder.layer.7.attention.output.LayerNorm.weight', 'bert.encoder.layer.7.attention.output.LayerNorm.bias', 'bert.encoder.layer.7.output.LayerNorm.weight', 'bert.encoder.layer.7.output.LayerNorm.bias', 'bert.encoder.layer.8.attention.output.LayerNorm.weight', 'bert.encoder.layer.8.attention.output.LayerNorm.bias', 'bert.encoder.layer.8.output.LayerNorm.weight', 'bert.encoder.layer.8.output.LayerNorm.bias', 'bert.encoder.layer.9.attention.output.LayerNorm.weight', 'bert.encoder.layer.9.attention.output.LayerNorm.bias', 'bert.encoder.layer.9.output.LayerNorm.weight', 'bert.encoder.layer.9.output.LayerNorm.bias', 'bert.encoder.layer.10.attention.output.LayerNorm.weight', 'bert.encoder.layer.10.attention.output.LayerNorm.bias', 'bert.encoder.layer.10.output.LayerNorm.weight', 'bert.encoder.layer.10.output.LayerNorm.bias', 'bert.encoder.layer.11.attention.output.LayerNorm.weight', 'bert.encoder.layer.11.attention.output.LayerNorm.bias', 'bert.encoder.layer.11.output.LayerNorm.weight', 'bert.encoder.layer.11.output.LayerNorm.bias'].
+There were unexpected keys in the checkpoint model loaded: ['bert.embeddings.LayerNorm.beta', 'bert.embeddings.LayerNorm.gamma', 'bert.encoder.layer.0.attention.output.LayerNorm.beta', 'bert.encoder.layer.0.attention.output.LayerNorm.gamma', 'bert.encoder.layer.0.output.LayerNorm.beta', 'bert.encoder.layer.0.output.LayerNorm.gamma', 'bert.encoder.layer.1.attention.output.LayerNorm.beta', 'bert.encoder.layer.1.attention.output.LayerNorm.gamma', 'bert.encoder.layer.1.output.LayerNorm.beta', 'bert.encoder.layer.1.output.LayerNorm.gamma', 'bert.encoder.layer.2.attention.output.LayerNorm.beta', 'bert.encoder.layer.2.attention.output.LayerNorm.gamma', 'bert.encoder.layer.2.output.LayerNorm.beta', 'bert.encoder.layer.2.output.LayerNorm.gamma', 'bert.encoder.layer.3.attention.output.LayerNorm.beta', 'bert.encoder.layer.3.attention.output.LayerNorm.gamma', 'bert.encoder.layer.3.output.LayerNorm.beta', 'bert.encoder.layer.3.output.LayerNorm.gamma', 'bert.encoder.layer.4.attention.output.LayerNorm.beta', 'bert.encoder.layer.4.attention.output.LayerNorm.gamma', 'bert.encoder.layer.4.output.LayerNorm.beta', 'bert.encoder.layer.4.output.LayerNorm.gamma', 'bert.encoder.layer.5.attention.output.LayerNorm.beta', 'bert.encoder.layer.5.attention.output.LayerNorm.gamma', 'bert.encoder.layer.5.output.LayerNorm.beta', 'bert.encoder.layer.5.output.LayerNorm.gamma', 'bert.encoder.layer.6.attention.output.LayerNorm.beta', 'bert.encoder.layer.6.attention.output.LayerNorm.gamma', 'bert.encoder.layer.6.output.LayerNorm.beta', 'bert.encoder.layer.6.output.LayerNorm.gamma', 'bert.encoder.layer.7.attention.output.LayerNorm.beta', 'bert.encoder.layer.7.attention.output.LayerNorm.gamma', 'bert.encoder.layer.7.output.LayerNorm.beta', 'bert.encoder.layer.7.output.LayerNorm.gamma', 'bert.encoder.layer.8.attention.output.LayerNorm.beta', 'bert.encoder.layer.8.attention.output.LayerNorm.gamma', 'bert.encoder.layer.8.output.LayerNorm.beta', 'bert.encoder.layer.8.output.LayerNorm.gamma', 'bert.encoder.layer.9.attention.output.LayerNorm.beta', 'bert.encoder.layer.9.attention.output.LayerNorm.gamma', 'bert.encoder.layer.9.output.LayerNorm.beta', 'bert.encoder.layer.9.output.LayerNorm.gamma', 'bert.encoder.layer.10.attention.output.LayerNorm.beta', 'bert.encoder.layer.10.attention.output.LayerNorm.gamma', 'bert.encoder.layer.10.output.LayerNorm.beta', 'bert.encoder.layer.10.output.LayerNorm.gamma', 'bert.encoder.layer.11.attention.output.LayerNorm.beta', 'bert.encoder.layer.11.attention.output.LayerNorm.gamma', 'bert.encoder.layer.11.output.LayerNorm.beta', 'bert.encoder.layer.11.output.LayerNorm.gamma'].
+100%|██████████| 72/72 [00:31<00:00,  2.32it/s]
+{'train_runtime': '30.91', 'train_samples_per_second': '73.19', 'train_steps_per_second': '2.33', 'train_loss': '0.6608', 'epoch': '3'}
+2026-04-26 02:32:42 - community_notes - INFO - Evaluating on test set...
+  0%|          | 0/8 [00:00<?, ?it/s] 25%|██▌       | 2/8 [00:00<00:00, 19.89it/s] 50%|█████     | 4/8 [00:00<00:00, 12.62it/s] 75%|███████▌  | 6/8 [00:00<00:00, 11.26it/s]100%|██████████| 8/8 [00:00<00:00, 11.87it/s]100%|██████████| 8/8 [00:00<00:00, 12.13it/s]
+
+=== BERT Baseline Results ===
+eval_loss: 0.6581
+eval_accuracy: 0.5976
+eval_precision: 0.6296
+eval_recall: 0.6343
+eval_f1: 0.6320
+eval_runtime: 0.7981
+eval_samples_per_second: 308.2490
+eval_steps_per_second: 10.0240
+epoch: 3.0000
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00,  1.23it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00,  1.23it/s]
+2026-04-26 02:32:44 - community_notes - INFO - Saved model to outputs/models/bert_baseline
+2026-04-26 02:32:44 - community_notes - INFO - BERT baseline complete!
